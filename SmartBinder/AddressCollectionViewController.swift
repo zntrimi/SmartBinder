@@ -34,12 +34,12 @@ class AddressListViewController: UIViewController, UICollectionViewDelegate, UIC
     
     
     //テーブルビューに表示する
-    func collectionView(_ collectionView: UICollectionView, numberOfSectionsInCollectionView section: Int) -> Int {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return addresses.count
     }
     //データを持ってくる
-    func collectionView(_ collectionView: UICollectionView, cellForRowAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withIdentifier:
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier:
         "Cell", for: indexPath) as! AddressListCollectionViewCell
         cell.nameLabel.text = addresses[indexPath.row].name
         return cell    }
