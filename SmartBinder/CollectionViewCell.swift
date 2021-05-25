@@ -7,7 +7,7 @@
 
 import UIKit
 
-class AddressListCollectionViewCell: UICollectionView {
+class AddressListCollectionViewCell: UICollectionViewCell {
     @IBOutlet var nameLabel: UILabel!
     
 }

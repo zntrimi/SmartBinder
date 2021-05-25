@@ -164,7 +164,18 @@
                         <viewLayoutGuide key="safeArea" id="kdq-7O-awG"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="fwB-Wf-ZSv"/>
+                    <navigationItem key="navigationItem" id="fwB-Wf-ZSv">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="Lpo-gw-qce">
+                            <connections>
+                                <action selector="cancel" destination="S54-JY-bWY" id="8gv-sW-BjM"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="fXG-7v-Iax">
+                            <connections>
+                                <action selector="addAddress" destination="S54-JY-bWY" id="pBv-Fd-oHF"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="nameTextField" destination="N0F-ne-ENH" id="u9P-WW-8pc"/>
                     </connections>
