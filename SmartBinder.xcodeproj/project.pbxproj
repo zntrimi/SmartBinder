@@ -3,27 +3,35 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DF2DD13E265BE68D00E159F3 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = DF2DD13D265BE68D00E159F3 /* Realm */; };
+		DF2DD140265BE68D00E159F3 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = DF2DD13F265BE68D00E159F3 /* RealmSwift */; };
+		DF2DD142265BEC1B00E159F3 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2DD141265BEC1B00E159F3 /* AddViewController.swift */; };
+		DF2DD144265BF30D00E159F3 /* AddressCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2DD143265BF30D00E159F3 /* AddressCollectionViewController.swift */; };
+		DF2DD146265BF3BA00E159F3 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2DD145265BF3BA00E159F3 /* Address.swift */; };
 		DF81C0FD2659F8EF00A9C814 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF81C0FC2659F8EF00A9C814 /* AppDelegate.swift */; };
 		DF81C0FF2659F8EF00A9C814 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF81C0FE2659F8EF00A9C814 /* SceneDelegate.swift */; };
-		DF81C1012659F8EF00A9C814 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF81C1002659F8EF00A9C814 /* ViewController.swift */; };
 		DF81C1042659F8EF00A9C814 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF81C1022659F8EF00A9C814 /* Main.storyboard */; };
 		DF81C1062659F8F200A9C814 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF81C1052659F8F200A9C814 /* Assets.xcassets */; };
 		DF81C1092659F8F200A9C814 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF81C1072659F8F200A9C814 /* LaunchScreen.storyboard */; };
+		DF81C11C265A3F3600A9C814 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF81C11B265A3F3600A9C814 /* CollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DF2DD141265BEC1B00E159F3 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
+		DF2DD143265BF30D00E159F3 /* AddressCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressCollectionViewController.swift; sourceTree = "<group>"; };
+		DF2DD145265BF3BA00E159F3 /* Address.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
 		DF81C0F92659F8EF00A9C814 /* SmartBinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartBinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF81C0FC2659F8EF00A9C814 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DF81C0FE2659F8EF00A9C814 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		DF81C1002659F8EF00A9C814 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DF81C1032659F8EF00A9C814 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DF81C1052659F8F200A9C814 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DF81C1082659F8F200A9C814 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DF81C10A2659F8F200A9C814 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DF81C11B265A3F3600A9C814 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +39,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF2DD140265BE68D00E159F3 /* RealmSwift in Frameworks */,
+				DF2DD13E265BE68D00E159F3 /* Realm in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,13 +66,16 @@
 		DF81C0FB2659F8EF00A9C814 /* SmartBinder */ = {
 			isa = PBXGroup;
 			children = (
-				DF81C0FC2659F8EF00A9C814 /* AppDelegate.swift */,
 				DF81C0FE2659F8EF00A9C814 /* SceneDelegate.swift */,
-				DF81C1002659F8EF00A9C814 /* ViewController.swift */,
+				DF81C0FC2659F8EF00A9C814 /* AppDelegate.swift */,
 				DF81C1022659F8EF00A9C814 /* Main.storyboard */,
 				DF81C1052659F8F200A9C814 /* Assets.xcassets */,
 				DF81C1072659F8F200A9C814 /* LaunchScreen.storyboard */,
+				DF81C11B265A3F3600A9C814 /* CollectionViewCell.swift */,
+				DF2DD141265BEC1B00E159F3 /* AddViewController.swift */,
+				DF2DD143265BF30D00E159F3 /* AddressCollectionViewController.swift */,
 				DF81C10A2659F8F200A9C814 /* Info.plist */,
+				DF2DD145265BF3BA00E159F3 /* Address.swift */,
 			);
 			path = SmartBinder;
 			sourceTree = "<group>";
@@ -83,6 +96,10 @@
 			dependencies = (
 			);
 			name = SmartBinder;
+			packageProductDependencies = (
+				DF2DD13D265BE68D00E159F3 /* Realm */,
+				DF2DD13F265BE68D00E159F3 /* RealmSwift */,
+			);
 			productName = SmartBinder;
 			productReference = DF81C0F92659F8EF00A9C814 /* SmartBinder.app */;
 			productType = "com.apple.product-type.application";
@@ -110,6 +127,9 @@
 				Base,
 			);
 			mainGroup = DF81C0F02659F8EF00A9C814;
+			packageReferences = (
+				DF2DD13C265BE68D00E159F3 /* XCRemoteSwiftPackageReference "realm-cocoa" */,
+			);
 			productRefGroup = DF81C0FA2659F8EF00A9C814 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,9 +157,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DF81C1012659F8EF00A9C814 /* ViewController.swift in Sources */,
+				DF81C11C265A3F3600A9C814 /* CollectionViewCell.swift in Sources */,
+				DF2DD144265BF30D00E159F3 /* AddressCollectionViewController.swift in Sources */,
+				DF2DD142265BEC1B00E159F3 /* AddViewController.swift in Sources */,
 				DF81C0FD2659F8EF00A9C814 /* AppDelegate.swift in Sources */,
 				DF81C0FF2659F8EF00A9C814 /* SceneDelegate.swift in Sources */,
+				DF2DD146265BF3BA00E159F3 /* Address.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +364,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DF2DD13C265BE68D00E159F3 /* XCRemoteSwiftPackageReference "realm-cocoa" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-cocoa.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.7.6;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DF2DD13D265BE68D00E159F3 /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DF2DD13C265BE68D00E159F3 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = Realm;
+		};
+		DF2DD13F265BE68D00E159F3 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DF2DD13C265BE68D00E159F3 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = RealmSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DF81C0F12659F8EF00A9C814 /* Project object */;
 }
