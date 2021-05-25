@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DF194E14265D42BA0057279A /* AddressListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF194E13265D42BA0057279A /* AddressListViewController.swift */; };
+		DF194E18265D43A80057279A /* AddressListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF194E17265D43A80057279A /* AddressListTableViewCell.swift */; };
 		DF2DD13E265BE68D00E159F3 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = DF2DD13D265BE68D00E159F3 /* Realm */; };
 		DF2DD140265BE68D00E159F3 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = DF2DD13F265BE68D00E159F3 /* RealmSwift */; };
 		DF2DD142265BEC1B00E159F3 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2DD141265BEC1B00E159F3 /* AddViewController.swift */; };
@@ -21,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DF194E13265D42BA0057279A /* AddressListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressListViewController.swift; sourceTree = "<group>"; };
+		DF194E17265D43A80057279A /* AddressListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressListTableViewCell.swift; sourceTree = "<group>"; };
 		DF2DD141265BEC1B00E159F3 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 		DF2DD143265BF30D00E159F3 /* AddressCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressCollectionViewController.swift; sourceTree = "<group>"; };
 		DF2DD145265BF3BA00E159F3 /* Address.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
@@ -76,6 +80,8 @@
 				DF2DD143265BF30D00E159F3 /* AddressCollectionViewController.swift */,
 				DF81C10A2659F8F200A9C814 /* Info.plist */,
 				DF2DD145265BF3BA00E159F3 /* Address.swift */,
+				DF194E13265D42BA0057279A /* AddressListViewController.swift */,
+				DF194E17265D43A80057279A /* AddressListTableViewCell.swift */,
 			);
 			path = SmartBinder;
 			sourceTree = "<group>";
@@ -161,7 +167,9 @@
 				DF2DD144265BF30D00E159F3 /* AddressCollectionViewController.swift in Sources */,
 				DF2DD142265BEC1B00E159F3 /* AddViewController.swift in Sources */,
 				DF81C0FD2659F8EF00A9C814 /* AppDelegate.swift in Sources */,
+				DF194E14265D42BA0057279A /* AddressListViewController.swift in Sources */,
 				DF81C0FF2659F8EF00A9C814 /* SceneDelegate.swift in Sources */,
+				DF194E18265D43A80057279A /* AddressListTableViewCell.swift in Sources */,
 				DF2DD146265BF3BA00E159F3 /* Address.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

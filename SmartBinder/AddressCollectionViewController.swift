@@ -10,7 +10,7 @@ import RealmSwift
 
 
 
-class AddressListViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+class AddressCollectionViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
 
     @IBOutlet var collectionView: UICollectionView!
     let relm = try! Realm()
