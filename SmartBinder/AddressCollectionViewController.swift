@@ -33,6 +33,7 @@ class AddressCollectionViewController: UIViewController, UICollectionViewDelegat
     }
     
     
+    
     //テーブルビューに表示する
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return addresses.count
@@ -44,5 +45,6 @@ class AddressCollectionViewController: UIViewController, UICollectionViewDelegat
         cell.nameLabel.text = addresses[indexPath.row].name
         return cell    }
 }
+
 
 

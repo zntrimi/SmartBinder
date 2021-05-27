@@ -41,6 +41,11 @@ class AddViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
+    @IBAction func delete() {
+        try! realm.write {
+            realm.deleteAll()
+        }}
+    
 
     
 
