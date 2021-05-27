@@ -42,4 +42,8 @@ class AddressListViewController: UIViewController, UITableViewDelegate, UITableV
         "Cell", for: indexPath) as! AddressListTableViewCell
         cell.nameLabel.text = addresses[indexPath.row].name
         return cell    }
+    
+    @IBAction func cancel() {
+        self.dismiss(animated: true, completion: nil)
+    }
 }

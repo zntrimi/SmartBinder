@@ -11,3 +11,4 @@ class AddressListCollectionViewCell: UICollectionViewCell {
     @IBOutlet var nameLabel: UILabel!
     
 }
+

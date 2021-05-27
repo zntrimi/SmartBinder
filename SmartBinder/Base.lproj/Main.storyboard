@@ -31,7 +31,7 @@
             <objects>
                 <viewController id="TmU-9E-M3Q" customClass="AddressListViewController" customModule="SmartBinder" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ibn-Nd-B1R">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="j3Y-kD-5Ak">
@@ -61,14 +61,29 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5gm-oH-QZw">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Title" id="fX7-oJ-CvI">
+                                        <barButtonItem key="leftBarButtonItem" style="plain" id="7rD-Se-BOw">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="Y4C-AI-fIA">
+                                                <rect key="frame" x="20" y="13" width="92" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Cancel"/>
+                                                <connections>
+                                                    <action selector="cancel" destination="TmU-9E-M3Q" eventType="touchUpInside" id="GHD-mJ-UE8"/>
+                                                </connections>
+                                            </button>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Kaz-VY-fbp"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="HhE-R9-0Qh"/>
-                    <connections>
-                        <outlet property="tableView" destination="j3Y-kD-5Ak" id="B9y-rZ-Nx2"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kbz-r3-YuH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -138,6 +153,7 @@
                                         <size key="customSize" width="215" height="142"/>
                                         <connections>
                                             <outlet property="nameLabel" destination="E9U-r2-5RL" id="cCp-vu-kED"/>
+                                            <segue destination="3IK-52-sUQ" kind="show" identifier="toGalleryView" id="i6K-Y6-odd"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -148,9 +164,10 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="7rP-LE-dhK">
-                        <barButtonItem key="leftBarButtonItem" title="Edit" id="GQK-5p-7FU">
+                        <barButtonItem key="leftBarButtonItem" title="Edit" id="GQK-5p-7FU" customClass="toEdit">
                             <connections>
-                                <segue destination="TmU-9E-M3Q" kind="show" id="qGf-UZ-Sck"/>
+                                <action selector="ToNextButton" destination="h7O-Do-fH2" id="z9J-li-JKe"/>
+                                <segue destination="TmU-9E-M3Q" kind="presentation" id="Ysa-yN-Sh3"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Add" id="YTE-ir-CMr">
@@ -166,7 +183,35 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nfA-AY-wQg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-507.24637681159425" y="-17.410714285714285"/>
+            <point key="canvasLocation" x="-477" y="-10"/>
+        </scene>
+        <!--Gallery View Controller-->
+        <scene sceneID="PoP-Ba-FPh">
+            <objects>
+                <viewController id="3IK-52-sUQ" customClass="GalleryViewController" customModule="SmartBinder" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dWe-Ca-4kY">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="96N-rK-xxq">
+                                <rect key="frame" x="186" y="372" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="gGr-HL-42Z"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="EJb-yq-XKu"/>
+                    <connections>
+                        <outlet property="myLabel" destination="96N-rK-xxq" id="hIQ-Du-88r"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pQf-Lw-0zW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="521" y="-238"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="y2k-ZG-EdQ">

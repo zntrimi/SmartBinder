@@ -12,13 +12,14 @@ import RealmSwift
 class AddViewController: UIViewController {
     
     @IBOutlet var nameTextField: UITextField!
+    
+    var number: Int = 0
 
     
     let realm = try! Realm()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
     //新しい行を追加する
     @IBAction func addAddress() {

@@ -20,6 +20,7 @@
 		DF81C1062659F8F200A9C814 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF81C1052659F8F200A9C814 /* Assets.xcassets */; };
 		DF81C1092659F8F200A9C814 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF81C1072659F8F200A9C814 /* LaunchScreen.storyboard */; };
 		DF81C11C265A3F3600A9C814 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF81C11B265A3F3600A9C814 /* CollectionViewCell.swift */; };
+		DFC236AA265FF4AF00AFAAEE /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC236A9265FF4AF00AFAAEE /* GalleryViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		DF81C1082659F8F200A9C814 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DF81C10A2659F8F200A9C814 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DF81C11B265A3F3600A9C814 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		DFC236A9265FF4AF00AFAAEE /* GalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 		DF81C0FB2659F8EF00A9C814 /* SmartBinder */ = {
 			isa = PBXGroup;
 			children = (
+				DFC236A9265FF4AF00AFAAEE /* GalleryViewController.swift */,
 				DF81C0FE2659F8EF00A9C814 /* SceneDelegate.swift */,
 				DF81C0FC2659F8EF00A9C814 /* AppDelegate.swift */,
 				DF81C1022659F8EF00A9C814 /* Main.storyboard */,
@@ -169,6 +172,7 @@
 				DF81C0FD2659F8EF00A9C814 /* AppDelegate.swift in Sources */,
 				DF194E14265D42BA0057279A /* AddressListViewController.swift in Sources */,
 				DF81C0FF2659F8EF00A9C814 /* SceneDelegate.swift in Sources */,
+				DFC236AA265FF4AF00AFAAEE /* GalleryViewController.swift in Sources */,
 				DF194E18265D43A80057279A /* AddressListTableViewCell.swift in Sources */,
 				DF2DD146265BF3BA00E159F3 /* Address.swift in Sources */,
 			);
