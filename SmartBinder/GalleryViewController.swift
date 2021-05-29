@@ -9,11 +9,17 @@ import UIKit
 
 class GalleryViewController: UIViewController {
     
+    @IBOutlet var GalleryCollectionView: UICollectionView!
+
     var num = Int()
         @IBOutlet var myLabel: UILabel!
+    
+
 
         override func viewDidLoad() {
             super.viewDidLoad()
+            
+
             //代入する
             myLabel.text = String(num)
             

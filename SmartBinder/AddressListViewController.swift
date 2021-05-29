@@ -13,6 +13,7 @@ import RealmSwift
 
 class AddressListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
+    
     @IBOutlet var tableView: UITableView!
     let relm = try! Realm()
     //アドレスのすべてのデータを参照する　配列に似たような形
@@ -38,10 +39,10 @@ class AddressListViewController: UIViewController, UITableViewDelegate, UITableV
     }
     //データを持ってくる
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier:
-        "Cell", for: indexPath) as! AddressListTableViewCell
-        cell.nameLabel.text = addresses[indexPath.row].name
-        return cell    }
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        cell.textLabel?.text = addresses[indexPath.row].name
+        return cell
+    }
     
     @IBAction func cancel() {
         self.dismiss(animated: true, completion: nil)

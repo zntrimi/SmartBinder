@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DF079172266231F900425768 /* GalleryCellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF079171266231F900425768 /* GalleryCellViewController.swift */; };
+		DF079174266236A800425768 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF079173266236A800425768 /* Note.swift */; };
+		DF0791762662389A00425768 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0791752662389A00425768 /* ImageViewController.swift */; };
 		DF194E14265D42BA0057279A /* AddressListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF194E13265D42BA0057279A /* AddressListViewController.swift */; };
 		DF194E18265D43A80057279A /* AddressListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF194E17265D43A80057279A /* AddressListTableViewCell.swift */; };
 		DF2DD13E265BE68D00E159F3 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = DF2DD13D265BE68D00E159F3 /* Realm */; };
@@ -24,6 +27,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DF079171266231F900425768 /* GalleryCellViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryCellViewController.swift; sourceTree = "<group>"; };
+		DF079173266236A800425768 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
+		DF0791752662389A00425768 /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 		DF194E13265D42BA0057279A /* AddressListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressListViewController.swift; sourceTree = "<group>"; };
 		DF194E17265D43A80057279A /* AddressListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressListTableViewCell.swift; sourceTree = "<group>"; };
 		DF2DD141265BEC1B00E159F3 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
@@ -72,7 +78,6 @@
 		DF81C0FB2659F8EF00A9C814 /* SmartBinder */ = {
 			isa = PBXGroup;
 			children = (
-				DFC236A9265FF4AF00AFAAEE /* GalleryViewController.swift */,
 				DF81C0FE2659F8EF00A9C814 /* SceneDelegate.swift */,
 				DF81C0FC2659F8EF00A9C814 /* AppDelegate.swift */,
 				DF81C1022659F8EF00A9C814 /* Main.storyboard */,
@@ -85,6 +90,10 @@
 				DF2DD145265BF3BA00E159F3 /* Address.swift */,
 				DF194E13265D42BA0057279A /* AddressListViewController.swift */,
 				DF194E17265D43A80057279A /* AddressListTableViewCell.swift */,
+				DFC236A9265FF4AF00AFAAEE /* GalleryViewController.swift */,
+				DF079171266231F900425768 /* GalleryCellViewController.swift */,
+				DF079173266236A800425768 /* Note.swift */,
+				DF0791752662389A00425768 /* ImageViewController.swift */,
 			);
 			path = SmartBinder;
 			sourceTree = "<group>";
@@ -167,13 +176,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				DF81C11C265A3F3600A9C814 /* CollectionViewCell.swift in Sources */,
+				DF079172266231F900425768 /* GalleryCellViewController.swift in Sources */,
 				DF2DD144265BF30D00E159F3 /* AddressCollectionViewController.swift in Sources */,
 				DF2DD142265BEC1B00E159F3 /* AddViewController.swift in Sources */,
 				DF81C0FD2659F8EF00A9C814 /* AppDelegate.swift in Sources */,
 				DF194E14265D42BA0057279A /* AddressListViewController.swift in Sources */,
 				DF81C0FF2659F8EF00A9C814 /* SceneDelegate.swift in Sources */,
+				DF079174266236A800425768 /* Note.swift in Sources */,
 				DFC236AA265FF4AF00AFAAEE /* GalleryViewController.swift in Sources */,
 				DF194E18265D43A80057279A /* AddressListTableViewCell.swift in Sources */,
+				DF0791762662389A00425768 /* ImageViewController.swift in Sources */,
 				DF2DD146265BF3BA00E159F3 /* Address.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

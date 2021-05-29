@@ -4,7 +4,6 @@
 //
 //  Created by Zentaro Imai on 2021/05/24.
 //
-
 import UIKit
 import RealmSwift
 
@@ -17,8 +16,6 @@ class AddressCollectionViewController: UIViewController, UICollectionViewDelegat
     //アドレスのすべてのデータを参照する　配列に似たような形
     let addresses = try! Realm().objects(Address.self)
     var notificationToken: NotificationToken?
-    var indexNum = 0
-
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,26 +31,7 @@ class AddressCollectionViewController: UIViewController, UICollectionViewDelegat
         }
     }
     
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-         print(indexPath.item)
-        indexNum = indexPath.item
-
-     }
     
-    @IBAction func register(){
-      
-          // registerボタンを押したら、toSecondというIDを持つsegueに移動する
-          self.performSegue(withIdentifier: "toGallery", sender: nil)
-          
-      }
-      
-      override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-          
-          // SecondViewControllerに移動する変数vcを定義する
-          let nextVC = segue.destination as! GalleryViewController
-         nextVC.num = indexNum
-
-      }
     
     //テーブルビューに表示する
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -65,15 +43,10 @@ class AddressCollectionViewController: UIViewController, UICollectionViewDelegat
         "Cell", for: indexPath) as! AddressListCollectionViewCell
         cell.nameLabel.text = addresses[indexPath.row].name
         return cell    }
-    
-    
-    @IBAction func ToNextButton() {
-        self.performSegue(withIdentifier: "toEdit", sender: nil)
-
-    }
-    
-    
 }
+
+
+
 
 
 
