@@ -16,6 +16,10 @@ class AddressCollectionViewController: UIViewController, UICollectionViewDelegat
     //アドレスのすべてのデータを参照する　配列に似たような形
     let addresses = try! Realm().objects(Address.self)
     var notificationToken: NotificationToken?
+    var indexNum = 0
+    var attributedText: NSAttributedString!
+
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,7 +47,49 @@ class AddressCollectionViewController: UIViewController, UICollectionViewDelegat
         "Cell", for: indexPath) as! AddressListCollectionViewCell
         cell.nameLabel.text = addresses[indexPath.row].name
         return cell    }
-}
+    
+    
+    
+    
+   func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+             print(indexPath.item)
+            indexNum = indexPath.item
+    self.performSegue(withIdentifier: "toGallery", sender: nil)
+        
+        
+
+         }
+
+      @IBAction func register(){
+
+              // registerボタンを押したら、toSecondというIDを持つsegueに移動する
+              self.performSegue(withIdentifier: "toGallery", sender: nil)
+
+          }
+    
+ 
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+
+    
+    if (segue.identifier == "toGallery") {
+        
+        // SecondViewControllerに移動する変数vcを定義する
+         let nextVC = segue.destination as! GalleryViewController
+       nextVC.num = indexNum
+        
+    }
+           
+
+
+          }
+    
+   
+    }
+    
+ 
+
+ 
+
 
 
 

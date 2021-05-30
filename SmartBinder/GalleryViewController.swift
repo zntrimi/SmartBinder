@@ -14,8 +14,6 @@ class GalleryViewController: UIViewController {
     var num = Int()
         @IBOutlet var myLabel: UILabel!
     
-
-
         override func viewDidLoad() {
             super.viewDidLoad()
             

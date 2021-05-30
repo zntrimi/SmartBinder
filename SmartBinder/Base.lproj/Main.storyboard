@@ -110,18 +110,18 @@
                                 <rect key="frame" x="20" y="111" width="374" height="658"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Wca-Mu-ydn">
-                                    <size key="itemSize" width="215" height="142"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Wca-Mu-ydn">
+                                    <size key="itemSize" width="150" height="150"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="SpP-el-7hr" customClass="AddressListCollectionViewCell" customModule="SmartBinder" customModuleProvider="target">
-                                        <rect key="frame" x="79.5" y="0.0" width="215" height="142"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="7Ko-gb-GTj">
-                                            <rect key="frame" x="0.0" y="0.0" width="215" height="142"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nCM-IN-baY">
@@ -150,10 +150,9 @@
                                             </subviews>
                                         </collectionViewCellContentView>
                                         <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <size key="customSize" width="215" height="142"/>
+                                        <size key="customSize" width="150" height="150"/>
                                         <connections>
                                             <outlet property="nameLabel" destination="E9U-r2-5RL" id="cCp-vu-kED"/>
-                                            <segue destination="3IK-52-sUQ" kind="show" identifier="toGalleryView" id="i6K-Y6-odd"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -166,7 +165,6 @@
                     <navigationItem key="navigationItem" id="7rP-LE-dhK">
                         <barButtonItem key="leftBarButtonItem" title="Edit" id="GQK-5p-7FU" customClass="toEdit">
                             <connections>
-                                <action selector="ToNextButton" destination="h7O-Do-fH2" id="z9J-li-JKe"/>
                                 <segue destination="TmU-9E-M3Q" kind="presentation" id="Ysa-yN-Sh3"/>
                             </connections>
                         </barButtonItem>
@@ -179,6 +177,7 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="collectionView" destination="ehN-P7-2od" id="lWf-bK-w1D"/>
+                        <segue destination="3IK-52-sUQ" kind="show" identifier="toGallery" id="IV8-P0-v4n"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nfA-AY-wQg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -188,7 +187,6 @@
         <!--Image View Controller-->
         <scene sceneID="kqd-3r-BcB">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="caM-BH-Vgg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="FHS-L0-hSW" customClass="ImageViewController" customModule="SmartBinder" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IkN-L3-y5B">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -234,6 +232,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="XE4-lL-a5s"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="caM-BH-Vgg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1095.6521739130435" y="-904.01785714285711"/>
         </scene>
@@ -267,8 +266,8 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="128" height="102"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ez-5s-K9j">
-                                                    <rect key="frame" x="43" y="104" width="42" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="重要" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ez-5s-K9j">
+                                                    <rect key="frame" x="43" y="104" width="35" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -306,7 +305,7 @@
                     <navigationItem key="navigationItem" id="EJb-yq-XKu"/>
                     <connections>
                         <outlet property="GalleryCollectionView" destination="Wdq-PD-sT0" id="Pok-vk-r42"/>
-                        <outlet property="myLabel" destination="96N-rK-xxq" id="hIQ-Du-88r"/>
+                        <outlet property="myLabel" destination="96N-rK-xxq" id="rWW-bo-fHB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pQf-Lw-0zW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
