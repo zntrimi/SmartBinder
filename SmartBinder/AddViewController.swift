@@ -22,7 +22,7 @@ class AddViewController: UIViewController {
         super.viewDidLoad()
     }
     //新しい行を追加する
-    @IBAction func addAddress() {
+    @IBAction func addAddress () {
         
         //データを追加するコード
         let newAddress = Address()
@@ -32,9 +32,18 @@ class AddViewController: UIViewController {
         try! realm.write {
         realm.add(newAddress)
         }
-
-        dismiss(animated: true, completion: nil)
         
+        //一個前の画面に戻る
+        navigationController?.popViewController(animated: true)
+        
+      //進むコード
+      /*  let storyboard: UIStoryboard = self.storyboard!
+        
+               // ②遷移先ViewControllerのインスタンス取得
+               let BackToMain = storyboard.instantiateViewController(withIdentifier: "Main") as! AddressCollectionViewController
+        
+               // ③画面遷移
+               self.show(BackToMain, sender: self) */
     }
     
     

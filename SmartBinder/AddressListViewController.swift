@@ -47,4 +47,25 @@ class AddressListViewController: UIViewController, UITableViewDelegate, UITableV
     @IBAction func cancel() {
         self.dismiss(animated: true, completion: nil)
     }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool
+    {
+        return true
+    }
+
+    //スワイプしたセルを削除　※arrayNameは変数名に変更してください
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == UITableViewCell.EditingStyle.delete {
+          
+            try! relm.write {
+                relm.delete(addresses[indexPath.row])
+            }
+            
+            
+            
+            tableView.deleteRows(at: [indexPath as IndexPath], with: UITableView.RowAnimation.automatic)
+        }
+    }
+    
+    
 }

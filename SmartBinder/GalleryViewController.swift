@@ -17,7 +17,7 @@ class GalleryViewController: UIViewController {
         override func viewDidLoad() {
             super.viewDidLoad()
             
-
+//collectionviewと同じようにデータを取る　
             //代入する
             myLabel.text = String(num)
             

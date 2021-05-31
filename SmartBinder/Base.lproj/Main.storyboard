@@ -92,7 +92,7 @@
         <!--Address Collection View Controller-->
         <scene sceneID="bv9-Fp-LID">
             <objects>
-                <viewController id="h7O-Do-fH2" customClass="AddressCollectionViewController" customModule="SmartBinder" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Main" id="h7O-Do-fH2" customClass="AddressCollectionViewController" customModule="SmartBinder" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="t3b-tL-Jmu">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -170,7 +170,7 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Add" id="YTE-ir-CMr">
                             <connections>
-                                <segue destination="S54-JY-bWY" kind="show" id="fIc-Ds-QiQ"/>
+                                <segue destination="S54-JY-bWY" kind="show" identifier="toAdd" id="fIc-Ds-QiQ"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
