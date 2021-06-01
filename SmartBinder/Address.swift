@@ -13,3 +13,10 @@ class Address: Object {
     @objc dynamic var name: String = ""
 
 }
+
+class PictureData: Object {
+    // 写真を保存するdata
+    @objc dynamic var data: NSData!
+    // 写真の説明を保存するtitle
+    @objc dynamic var title = ""
+}

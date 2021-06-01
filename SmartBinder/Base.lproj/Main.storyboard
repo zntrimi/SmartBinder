@@ -302,7 +302,20 @@
                         <viewLayoutGuide key="safeArea" id="gGr-HL-42Z"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="EJb-yq-XKu"/>
+                    <navigationItem key="navigationItem" id="EJb-yq-XKu">
+                        <rightBarButtonItems>
+                            <barButtonItem title="Add" image="camera.fill" catalog="system" id="GD2-uD-JRW">
+                                <connections>
+                                    <action selector="addImage" destination="3IK-52-sUQ" id="esC-Vb-dOr"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Item" image="folder.badge.plus" catalog="system" id="Syf-BD-3rF">
+                                <connections>
+                                    <action selector="addImagefromG" destination="3IK-52-sUQ" id="eeL-kl-1H8"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
                     <connections>
                         <outlet property="GalleryCollectionView" destination="Wdq-PD-sT0" id="Pok-vk-r42"/>
                         <outlet property="myLabel" destination="96N-rK-xxq" id="rWW-bo-fHB"/>
@@ -310,7 +323,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pQf-Lw-0zW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="518.84057971014499" y="-238.39285714285714"/>
+            <point key="canvasLocation" x="528" y="-238"/>
         </scene>
         <!--Add View Controller-->
         <scene sceneID="9MZ-hA-nbj">
@@ -372,6 +385,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="camera.fill" catalog="system" width="128" height="94"/>
+        <image name="folder.badge.plus" catalog="system" width="128" height="91"/>
         <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
         <image name="trash" catalog="system" width="121" height="128"/>
         <systemColor name="systemBackgroundColor">

@@ -62,7 +62,7 @@ class AddressCollectionViewController: UIViewController, UICollectionViewDelegat
 
       @IBAction func register(){
 
-              // registerボタンを押したら、toSecondというIDを持つsegueに移動する
+              // registerボタンを押したら、toSというIDを持つsegueに移動する
               self.performSegue(withIdentifier: "toGallery", sender: nil)
 
           }
