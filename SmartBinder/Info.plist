@@ -62,7 +62,7 @@
 	<key>NSPhotoLibraryAddUsageDescription</key>
 	<string>編集した画像をフォトライブラリに保存します</string>
 	<key>NSCameraUsageDescription</key>
-	<string>アプリ内で管理する画像を保存するためにカメラを起動します</string>
+	<string>アプリ内に保存し管理する写真をカメラから呼び出します。</string>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>

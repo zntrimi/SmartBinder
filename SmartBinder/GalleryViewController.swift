@@ -8,21 +8,83 @@
 import UIKit
 import RealmSwift
 
-class GalleryViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class GalleryViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UICollectionViewDelegate, UICollectionViewDataSource {
     
     @IBOutlet var GalleryCollectionView: UICollectionView!
 
     var num = Int()
         @IBOutlet var myLabel: UILabel!
+    var pictures: Results<PictureData>!
+//    let pictures = try! Realm().objects(PictureData.self)
+    var notificationToken: NotificationToken?
+    var indexNum = 0
+    var attributedText: NSAttributedString!
+    
+    let realm = try! Realm()
+
+
     
         override func viewDidLoad() {
             super.viewDidLoad()
             
+ 
+            
+            print(Realm.Configuration.defaultConfiguration.fileURL!)
+            
+            //notificationToken = addresses.observe { [weak self] _ in
+         //   self?.collectionView.reloadData()
+            
 //collectionviewと同じようにデータを取る　
             //代入する
             myLabel.text = String(num)
+            
+            
+            GalleryCollectionView.delegate = self
+            GalleryCollectionView.dataSource = self
+            
+    
+            
+            
         }
     
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        // picturesの配列の中身の数を表示する
+        return pictures.count
+    }
+    
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        // Realmの初期化
+        let realm = try! Realm()
+        // Realmから保存されている写真のデータを取得
+        pictures = realm.objects(PictureData.self)
+        // CollectionViewを更新
+        GalleryCollectionView.reloadData()
+        
+        
+        
+        print(Realm.Configuration.defaultConfiguration.fileURL!)
+        
+      
+    }
+    
+    
+    
+    // さっき作ったCollectionViewのセルにアイテムを表示
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        // Main.StoryboardのCellを探してくる
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! GalleryCellViewController
+        // imageViewに写真を表示
+        cell.OneImageView.image = UIImage(data: pictures[indexPath.row].data as Data)
+        // Labelにタイトルを表示
+      // z1  cell.titleLabel.text = pictures[indexPath.row].title
+        // Cellに適用する
+        return cell
+    }
+
     
     @IBAction func addImage() {
         // 写真のピッカーを設定する
@@ -68,6 +130,8 @@ class GalleryViewController: UIViewController, UIImagePickerControllerDelegate, 
         self.dismiss(animated: true, completion: nil)
     }
             
+    
+    
     
 
     /*

@@ -31,9 +31,17 @@ class ImageViewController: UIViewController {
     }
     
     
-    
-    
+ /*
+return addresses.count
+}
+//データを持ってくる
+func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+let cell = collectionView.dequeueReusableCell(withReuseIdentifier:
+"Cell", for: indexPath) as! AddressListCollectionViewCell
+cell.nameLabel.text = addresses[indexPath.row].name
+return cell    }
 
+*/
 
     /*
     // MARK: - Navigation

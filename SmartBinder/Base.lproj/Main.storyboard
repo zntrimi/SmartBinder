@@ -255,7 +255,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="7aF-rj-4so" customClass="GalleryCellViewController" customModule="SmartBinder" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="7aF-rj-4so" customClass="GalleryCellViewController" customModule="SmartBinder" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="128" height="130"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="INB-D5-W9d">
@@ -277,8 +277,8 @@
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="128" height="130"/>
                                         <connections>
-                                            <outlet property="ImageLabel" destination="1ez-5s-K9j" id="B65-Ce-efN"/>
-                                            <outlet property="OneImageView" destination="sw2-MV-jJ9" id="Wnb-i4-KiM"/>
+                                            <outlet property="ImageLabel" destination="1ez-5s-K9j" id="JRS-rC-jSf"/>
+                                            <outlet property="OneImageView" destination="sw2-MV-jJ9" id="jIn-Ac-Fih"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -317,7 +317,7 @@
                         </rightBarButtonItems>
                     </navigationItem>
                     <connections>
-                        <outlet property="GalleryCollectionView" destination="Wdq-PD-sT0" id="Pok-vk-r42"/>
+                        <outlet property="GalleryCollectionView" destination="Wdq-PD-sT0" id="nCu-qA-yNM"/>
                         <outlet property="myLabel" destination="96N-rK-xxq" id="rWW-bo-fHB"/>
                     </connections>
                 </viewController>
