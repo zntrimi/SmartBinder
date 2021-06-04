@@ -24,6 +24,8 @@
 		DF81C1092659F8F200A9C814 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF81C1072659F8F200A9C814 /* LaunchScreen.storyboard */; };
 		DF81C11C265A3F3600A9C814 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF81C11B265A3F3600A9C814 /* CollectionViewCell.swift */; };
 		DFC236AA265FF4AF00AFAAEE /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC236A9265FF4AF00AFAAEE /* GalleryViewController.swift */; };
+		DFD080902669FE7F00DD71AE /* AddTagViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD0808F2669FE7F00DD71AE /* AddTagViewController.swift */; };
+		DFD08092266A088F00DD71AE /* Screen Shot 2021-04-08 at 10.03.23.png in Resources */ = {isa = PBXBuildFile; fileRef = DFD08091266A088F00DD71AE /* Screen Shot 2021-04-08 at 10.03.23.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +46,8 @@
 		DF81C10A2659F8F200A9C814 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DF81C11B265A3F3600A9C814 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		DFC236A9265FF4AF00AFAAEE /* GalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
+		DFD0808F2669FE7F00DD71AE /* AddTagViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTagViewController.swift; sourceTree = "<group>"; };
+		DFD08091266A088F00DD71AE /* Screen Shot 2021-04-08 at 10.03.23.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screen Shot 2021-04-08 at 10.03.23.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +86,7 @@
 				DF81C0FC2659F8EF00A9C814 /* AppDelegate.swift */,
 				DF81C1022659F8EF00A9C814 /* Main.storyboard */,
 				DF81C1052659F8F200A9C814 /* Assets.xcassets */,
+				DFD08091266A088F00DD71AE /* Screen Shot 2021-04-08 at 10.03.23.png */,
 				DF81C1072659F8F200A9C814 /* LaunchScreen.storyboard */,
 				DF81C11B265A3F3600A9C814 /* CollectionViewCell.swift */,
 				DF81C10A2659F8F200A9C814 /* Info.plist */,
@@ -94,6 +99,7 @@
 				DF079171266231F900425768 /* GalleryCellViewController.swift */,
 				DF079173266236A800425768 /* Note.swift */,
 				DF0791752662389A00425768 /* ImageViewController.swift */,
+				DFD0808F2669FE7F00DD71AE /* AddTagViewController.swift */,
 			);
 			path = SmartBinder;
 			sourceTree = "<group>";
@@ -162,6 +168,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DFD08092266A088F00DD71AE /* Screen Shot 2021-04-08 at 10.03.23.png in Resources */,
 				DF81C1092659F8F200A9C814 /* LaunchScreen.storyboard in Resources */,
 				DF81C1062659F8F200A9C814 /* Assets.xcassets in Resources */,
 				DF81C1042659F8EF00A9C814 /* Main.storyboard in Resources */,
@@ -185,6 +192,7 @@
 				DF079174266236A800425768 /* Note.swift in Sources */,
 				DFC236AA265FF4AF00AFAAEE /* GalleryViewController.swift in Sources */,
 				DF194E18265D43A80057279A /* AddressListTableViewCell.swift in Sources */,
+				DFD080902669FE7F00DD71AE /* AddTagViewController.swift in Sources */,
 				DF0791762662389A00425768 /* ImageViewController.swift in Sources */,
 				DF2DD146265BF3BA00E159F3 /* Address.swift in Sources */,
 			);

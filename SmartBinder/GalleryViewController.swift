@@ -8,44 +8,47 @@
 import UIKit
 import RealmSwift
 
-class GalleryViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UICollectionViewDelegate, UICollectionViewDataSource {
+class GalleryViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UICollectionViewDelegate, UICollectionViewDataSource, UITextFieldDelegate {
     
     @IBOutlet var GalleryCollectionView: UICollectionView!
-
+    
     var num = Int()
-        @IBOutlet var myLabel: UILabel!
+    @IBOutlet var myLabel: UILabel!
     var pictures: Results<PictureData>!
-//    let pictures = try! Realm().objects(PictureData.self)
+    //    let pictures = try! Realm().objects(PictureData.self)
     var notificationToken: NotificationToken?
     var indexNum = 0
     var attributedText: NSAttributedString!
     
     let realm = try! Realm()
-
+//    let storyboard = UIStoryboard(name: "AddTag", bundle: nil)
+    
 
     
-        override func viewDidLoad() {
-            super.viewDidLoad()
-            
- 
-            
-            print(Realm.Configuration.defaultConfiguration.fileURL!)
-            
-            //notificationToken = addresses.observe { [weak self] _ in
-         //   self?.collectionView.reloadData()
-            
-//collectionviewと同じようにデータを取る　
-            //代入する
-            myLabel.text = String(num)
-            
-            
-            GalleryCollectionView.delegate = self
-            GalleryCollectionView.dataSource = self
-            
     
-            
-            
-        }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        
+        
+        print(Realm.Configuration.defaultConfiguration.fileURL!)
+        
+        //notificationToken = addresses.observe { [weak self] _ in
+        //   self?.collectionView.reloadData()
+        
+        //collectionviewと同じようにデータを取る
+        //代入する
+        myLabel.text = String(num)
+        
+        
+        GalleryCollectionView.delegate = self
+        GalleryCollectionView.dataSource = self
+        
+        
+        
+        
+    }
     
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -68,7 +71,7 @@ class GalleryViewController: UIViewController, UIImagePickerControllerDelegate, 
         
         print(Realm.Configuration.defaultConfiguration.fileURL!)
         
-      
+        
     }
     
     
@@ -80,11 +83,11 @@ class GalleryViewController: UIViewController, UIImagePickerControllerDelegate, 
         // imageViewに写真を表示
         cell.OneImageView.image = UIImage(data: pictures[indexPath.row].data as Data)
         // Labelにタイトルを表示
-      // z1  cell.titleLabel.text = pictures[indexPath.row].title
+        // z1  cell.titleLabel.text = pictures[indexPath.row].title
         // Cellに適用する
         return cell
     }
-
+    
     
     @IBAction func addImage() {
         // 写真のピッカーを設定する
@@ -95,6 +98,10 @@ class GalleryViewController: UIViewController, UIImagePickerControllerDelegate, 
         picker.delegate = self
         // ピッカー（カメラ）を起動する
         present(picker, animated: true, completion: nil)
+        
+        self.performSegue(withIdentifier: "goToAdd", sender: nil)
+
+
     }
     
     @IBAction func addImagefromG() {
@@ -106,10 +113,18 @@ class GalleryViewController: UIViewController, UIImagePickerControllerDelegate, 
         picker.delegate = self
         // ピッカー（カメラ）を起動する
         present(picker, animated: true, completion: nil)
+        
+        self.performSegue(withIdentifier: "goToAdd", sender: nil)
+
     }
     
     
+    
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+
+        
+      
+        
         // Realmの初期化
         let realm = try! Realm()
         // 撮影した写真の取得
@@ -121,7 +136,7 @@ class GalleryViewController: UIViewController, UIImagePickerControllerDelegate, 
         // 写真を設定
         pictureData.data = data
         // 写真の説明を設定
-        pictureData.title = "Test"
+      //  pictureData.title = "Test"
         // Realmにデータを書き込む
         try! realm.write {
             realm.add(pictureData)
@@ -129,20 +144,35 @@ class GalleryViewController: UIViewController, UIImagePickerControllerDelegate, 
         // カメラを終了する
         self.dismiss(animated: true, completion: nil)
     }
-            
     
     
-    
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 
+       
+       if (segue.identifier == "goToAdd") {
+           
+           // SecondViewControllerに移動する変数vcを定義する
+      
+   //         let nextVC = segue.destination as! AddTagViewController
+    //    nextVC.num = indexNum
+          
+           
+       }
+
+
+             }
+    
+    
+    
     /*
-    // MARK: - Navigation
-
-             Swift Compiler Error Group    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
-
+     // MARK: - Navigation
+     
+     Swift Compiler Error Group    // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destination.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
+    
 }

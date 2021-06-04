@@ -55,8 +55,6 @@ class AddressCollectionViewController: UIViewController, UICollectionViewDelegat
              print(indexPath.item)
             indexNum = indexPath.item
     self.performSegue(withIdentifier: "toGallery", sender: nil)
-        
-        
 
          }
 
@@ -78,7 +76,6 @@ class AddressCollectionViewController: UIViewController, UICollectionViewDelegat
        nextVC.num = indexNum
         
     }
-           
 
 
           }

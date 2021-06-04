@@ -31,7 +31,6 @@ class AddressListViewController: UIViewController, UITableViewDelegate, UITableV
         notificationToken = addresses.observe { [weak self] _ in
         self?.tableView.reloadData()
             
-            
         }
     }
     //テーブルビューに表示する
