@@ -18,6 +18,7 @@ class AddressCollectionViewController: UIViewController, UICollectionViewDelegat
     var notificationToken: NotificationToken?
     var indexNum = 0
     var attributedText: NSAttributedString!
+    @IBOutlet var label:UILabel!
 
 
 
@@ -31,7 +32,7 @@ class AddressCollectionViewController: UIViewController, UICollectionViewDelegat
         
         notificationToken = addresses.observe { [weak self] _ in
         self?.collectionView.reloadData()
-            
+                        
         }
     }
     
@@ -79,6 +80,11 @@ class AddressCollectionViewController: UIViewController, UICollectionViewDelegat
 
 
           }
+    
+    @IBAction func delete() {
+        try! relm.write {
+            relm.deleteAll()
+        }}
     
    
     }

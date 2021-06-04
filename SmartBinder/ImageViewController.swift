@@ -11,6 +11,10 @@ import Accounts
 
 class ImageViewController: UIViewController {
     
+    var num = Int()
+    var image: UIImage!
+
+    
 
         @IBOutlet weak var scrollView: UIScrollView!
         @IBOutlet weak var imageView: UIImageView!
@@ -21,14 +25,26 @@ class ImageViewController: UIViewController {
             scrollView.minimumZoomScale = 1
             
             scrollView.delegate = self
+            print(num)
+            
+            imageView.image = image
+
         }
     
     @IBAction func share ()  {
-     let text = "This is the text…"
-     let textShare = [ text ]
-     let activityViewController = UIActivityViewController(activityItems: textShare , applicationActivities: nil)
-     activityViewController.popoverPresentationController?.sourceView = self.view
-     self.present(activityViewController, animated: true, completion: nil)
+        
+        if imageView.image != nil {
+            
+            let activityVC = UIActivityViewController(activityItems: [imageView.image!, "SmartBinder"], applicationActivities: nil)
+            
+            self.present(activityVC, animated: true, completion: nil)
+
+        }else{
+            print("画像がありません")
+        }
+    
+     
+
     }
     }
 

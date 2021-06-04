@@ -13,44 +13,51 @@ class AddTagViewController: UIViewController {
     @IBOutlet var nameTextField: UITextField!
     
     var number: Int = 0
+    @IBOutlet weak var imageView: UIImageView!
+
+    
+    
+    var num = Int()
+    var image: UIImage!
 
     
     let realm = try! Realm()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        imageView.image = image
+
     }
     
     //新しい行を追加する
     @IBAction func addTag () {
+        
+        let realm = try! Realm()
+
         
         //データを追加するコード
         let PictureData = PictureData()
         PictureData.title = nameTextField.text!
 
 
-        
+        let data = NSData(data: image.jpegData(compressionQuality: 0.9)!)
+      
+    
+        // 写真を設定
+        PictureData.data = data
+        // 写真の説明を設定
+      //  pictureData.title = "Test"
+        // Realmにデータを書き込む
         try! realm.write {
             realm.add(PictureData)
-        }
-        
-        //一個前の画面に戻る
-        navigationController?.popViewController(animated: true)
-        
-      //進むコード
-      /*  let storyboard: UIStoryboard = self.storyboard!
-        
+
+            self.navigationController?.popViewController(animated: true)
+
                // ②遷移先ViewControllerのインスタンス取得
-               let BackToMain = storyboard.instantiateViewController(withIdentifier: "Main") as! AddressCollectionViewController
-        
-               // ③画面遷移
-               self.show(BackToMain, sender: self) */
+
+            //   self.show(goToAdd, sender: self)
     }
     
-    
-    @IBAction func cancel() {
-        dismiss(animated: true, completion: nil)
-    }
     
 
     
@@ -65,4 +72,5 @@ class AddTagViewController: UIViewController {
     }
     */
 
+}
 }

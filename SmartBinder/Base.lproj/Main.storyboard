@@ -124,7 +124,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nCM-IN-baY">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="files_schematic.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="nCM-IN-baY">
                                                     <rect key="frame" x="13" y="62" width="105" height="69"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
@@ -157,6 +157,14 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bOK-wp-2dh">
+                                <rect key="frame" x="27" y="739" width="58" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Reset all"/>
+                                <connections>
+                                    <action selector="delete" destination="h7O-Do-fH2" eventType="touchUpInside" id="psA-vj-12p"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="hDq-vt-WTf"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -280,7 +288,7 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="重要" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ez-5s-K9j">
-                                                    <rect key="frame" x="43" y="104" width="35" height="21"/>
+                                                    <rect key="frame" x="0.0" y="104" width="128" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -290,8 +298,8 @@
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="128" height="130"/>
                                         <connections>
-                                            <outlet property="ImageLabel" destination="1ez-5s-K9j" id="JRS-rC-jSf"/>
                                             <outlet property="OneImageView" destination="sw2-MV-jJ9" id="jIn-Ac-Fih"/>
+                                            <outlet property="titleLabel" destination="1ez-5s-K9j" id="qlK-uD-ddI"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -300,9 +308,6 @@
                                 <rect key="frame" x="169" y="433" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <connections>
-                                    <segue destination="FHS-L0-hSW" kind="show" id="S3q-a7-MIw"/>
-                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="96N-rK-xxq">
                                 <rect key="frame" x="356" y="769" width="42" height="21"/>
@@ -332,12 +337,13 @@
                     <connections>
                         <outlet property="GalleryCollectionView" destination="Wdq-PD-sT0" id="nCu-qA-yNM"/>
                         <outlet property="myLabel" destination="96N-rK-xxq" id="rWW-bo-fHB"/>
-                        <segue destination="Gbj-bx-q9x" kind="show" identifier="goToAdd" id="jjW-AX-whN"/>
+                        <segue destination="FHS-L0-hSW" kind="show" identifier="toDetail" id="dA8-Hu-QyL"/>
+                        <segue destination="Gbj-bx-q9x" kind="show" identifier="goToAdd" id="15y-bl-8yc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pQf-Lw-0zW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="307" y="-279"/>
+            <point key="canvasLocation" x="305.79710144927537" y="-279.24107142857139"/>
         </scene>
         <!--Add Tag View Controller-->
         <scene sceneID="NAl-6H-ENx">
@@ -361,12 +367,17 @@
                                     <action selector="addTag" destination="Gbj-bx-q9x" eventType="touchUpInside" id="Kpr-1R-9Wh"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Pu-Wv-o1A">
+                                <rect key="frame" x="97" y="485" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="iav-AV-UIe"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="8KN-gN-Vq8"/>
                     <connections>
+                        <outlet property="imageView" destination="4Pu-Wv-o1A" id="b2M-mb-vP7"/>
                         <outlet property="nameTextField" destination="dE7-xw-fah" id="NYx-1X-jx8"/>
                     </connections>
                 </viewController>
@@ -436,6 +447,7 @@
     <resources>
         <image name="Screen Shot 2021-04-08 at 10.03.23.png" width="1680" height="1050"/>
         <image name="camera.fill" catalog="system" width="128" height="94"/>
+        <image name="files_schematic.jpg" width="3260" height="2320"/>
         <image name="folder.badge.plus" catalog="system" width="128" height="91"/>
         <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
         <image name="trash" catalog="system" width="121" height="128"/>

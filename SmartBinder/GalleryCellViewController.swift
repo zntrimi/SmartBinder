@@ -6,11 +6,10 @@
 //
 
 import UIKit
-
 class GalleryCellViewController: UICollectionViewCell {
     
     @IBOutlet  var OneImageView: UIImageView!
-        @IBOutlet  var ImageLabel: UILabel!
+        @IBOutlet  var titleLabel: UILabel!
 
  
     

@@ -6,7 +6,6 @@
 //
 
 
-
 import UIKit
 import RealmSwift
 
@@ -52,14 +51,7 @@ class AddressListViewController: UIViewController, UITableViewDelegate, UITableV
     {
         return true
     }
-    
-     func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
-        return .none
-    }
 
-     func tableView(_ tableView: UITableView, shouldIndentWhileEditingRowAt indexPath: IndexPath) -> Bool {
-        return false
-    }
     //スワイプしたセルを削除　※arrayNameは変数名に変更してください
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == UITableViewCell.EditingStyle.delete {
@@ -76,3 +68,5 @@ class AddressListViewController: UIViewController, UITableViewDelegate, UITableV
     
     
 }
+
+

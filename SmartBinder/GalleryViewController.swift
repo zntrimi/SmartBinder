@@ -14,6 +14,7 @@ class GalleryViewController: UIViewController, UIImagePickerControllerDelegate, 
     
     var num = Int()
     @IBOutlet var myLabel: UILabel!
+    @IBOutlet var titleLabel: UILabel!
     var pictures: Results<PictureData>!
     //    let pictures = try! Realm().objects(PictureData.self)
     var notificationToken: NotificationToken?
@@ -23,7 +24,7 @@ class GalleryViewController: UIViewController, UIImagePickerControllerDelegate, 
     let realm = try! Realm()
 //    let storyboard = UIStoryboard(name: "AddTag", bundle: nil)
     
-
+    var image: UIImage!
     
     
     
@@ -82,8 +83,8 @@ class GalleryViewController: UIViewController, UIImagePickerControllerDelegate, 
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! GalleryCellViewController
         // imageViewに写真を表示
         cell.OneImageView.image = UIImage(data: pictures[indexPath.row].data as Data)
-        // Labelにタイトルを表示
-        // z1  cell.titleLabel.text = pictures[indexPath.row].title
+
+         cell.titleLabel.text = pictures[indexPath.row].title
         // Cellに適用する
         return cell
     }
@@ -99,9 +100,6 @@ class GalleryViewController: UIViewController, UIImagePickerControllerDelegate, 
         // ピッカー（カメラ）を起動する
         present(picker, animated: true, completion: nil)
         
-        self.performSegue(withIdentifier: "goToAdd", sender: nil)
-
-
     }
     
     @IBAction func addImagefromG() {
@@ -114,22 +112,18 @@ class GalleryViewController: UIViewController, UIImagePickerControllerDelegate, 
         // ピッカー（カメラ）を起動する
         present(picker, animated: true, completion: nil)
         
-        self.performSegue(withIdentifier: "goToAdd", sender: nil)
-
+     
     }
     
     
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
 
-        
-      
-        
         // Realmの初期化
         let realm = try! Realm()
         // 撮影した写真の取得
-        let image = info[.originalImage] as! UIImage
-        // 写真を変換
+        image = info[.originalImage] as! UIImage
+   /*     // 写真を変換
         let data = NSData(data: image.jpegData(compressionQuality: 0.9)!)
         // Realmにデータを保存する
         let pictureData = PictureData()
@@ -140,16 +134,39 @@ class GalleryViewController: UIViewController, UIImagePickerControllerDelegate, 
         // Realmにデータを書き込む
         try! realm.write {
             realm.add(pictureData)
-        }
-        // カメラを終了する
+        } */
+        // カメラを終了する操作
         self.dismiss(animated: true, completion: nil)
+        
+        self.performSegue(withIdentifier: "goToAdd", sender: nil)
+        
+        GalleryCollectionView.reloadData()
+        
+        
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+
+      
+      if (segue.identifier == "goToAdd") {
+          
+          // SecondViewControllerに移動する変数vcを定義する
+           let nextVC = segue.destination as! AddTagViewController
+        nextVC.image = image
+          
+      }
+
+
     
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+
+    
+    
+    
+    
+   //  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 
        
-       if (segue.identifier == "goToAdd") {
+     //  if (segue.identifier == "goToAdd") {
            
            // SecondViewControllerに移動する変数vcを定義する
       
@@ -157,10 +174,10 @@ class GalleryViewController: UIViewController, UIImagePickerControllerDelegate, 
     //    nextVC.num = indexNum
           
            
-       }
+     //  }
 
 
-             }
+          //   }
     
     
     
@@ -175,4 +192,5 @@ class GalleryViewController: UIViewController, UIImagePickerControllerDelegate, 
      */
     
     
+}
 }
