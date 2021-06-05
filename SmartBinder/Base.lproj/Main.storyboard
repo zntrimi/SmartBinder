@@ -227,7 +227,11 @@
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="elC-Vj-P4a"/>
-                                    <barButtonItem title="Item" image="trash" catalog="system" id="qAv-Bw-HUG"/>
+                                    <barButtonItem title="Item" image="trash" catalog="system" id="qAv-Bw-HUG">
+                                        <connections>
+                                            <action selector="deleteimage:" destination="FHS-L0-hSW" id="2MY-YZ-wxh"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gSM-jc-gqh">

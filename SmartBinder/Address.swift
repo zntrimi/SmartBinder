@@ -12,6 +12,9 @@ class Address: Object {
     
     @objc dynamic var name: String = ""
 
+    let pictureDates = List<PictureData>()
+
+    
 }
 
 class PictureData: Object {

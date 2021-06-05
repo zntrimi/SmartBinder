@@ -146,6 +146,9 @@ class GalleryViewController: UIViewController, UIImagePickerControllerDelegate, 
     }
     
     
+    
+    
+    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
               print(indexPath.item)
              indexNum = indexPath.item
@@ -169,7 +172,7 @@ class GalleryViewController: UIViewController, UIImagePickerControllerDelegate, 
         
       }
 
-
+        
     
 
     

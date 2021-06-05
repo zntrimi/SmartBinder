@@ -55,6 +55,44 @@ class ImageViewController: UIViewController {
      
 
     }
+    
+    
+    @IBAction func deleteimage (_ sender: Any) {
+             //アラートを表示する↓＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+             let alert: UIAlertController = UIAlertController(title: "注意", message: "削除してもいいですか？", preferredStyle: .actionSheet)
+             let canselAction: UIAlertAction = UIAlertAction(title: "キャンセル", style: .cancel) { (UIAlertAction) in
+                 print("キャンセル")
+             }
+             let okAction: UIAlertAction = UIAlertAction(title: "削除", style: .destructive) { (UIAlertAction) in
+                try! self.realm.write {
+                    self.realm.delete(self.pictures[self.num])
+                        }
+                
+                //アラートが消えるのと画面遷移が重ならないように0.5秒後に画面遷移するようにしてる
+                          DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                
+                self.navigationController?.popViewController(animated: true)
+
+                          }
+                
+                
+                
+                
+             }
+             //アラートに設定を反映させる
+             alert.addAction(okAction)
+             alert.addAction(canselAction)
+             //アラート画面を表示させる
+             present(alert, animated: true, completion: nil)
+             //アラートを表示する↑＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+         }
+    
+    
+    
+    
+
+    
+    
     }
 
     extension ImageViewController: UIScrollViewDelegate {
