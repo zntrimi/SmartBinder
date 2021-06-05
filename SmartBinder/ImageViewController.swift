@@ -7,12 +7,17 @@
 
 import UIKit
 import Accounts
+import RealmSwift
 
 
 class ImageViewController: UIViewController {
     
     var num = Int()
     var image: UIImage!
+    
+    let realm = try! Realm()
+    var pictures: Results<PictureData>!
+
 
     
 
@@ -25,9 +30,13 @@ class ImageViewController: UIViewController {
             scrollView.minimumZoomScale = 1
             
             scrollView.delegate = self
-            print(num)
             
-            imageView.image = image
+            let realm = try! Realm()
+            pictures = realm.objects(PictureData.self)
+
+
+            
+            imageView.image = UIImage(data: pictures[num].data as Data)
 
         }
     

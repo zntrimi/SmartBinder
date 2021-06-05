@@ -145,6 +145,14 @@ class GalleryViewController: UIViewController, UIImagePickerControllerDelegate, 
         
     }
     
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+              print(indexPath.item)
+             indexNum = indexPath.item
+     self.performSegue(withIdentifier: "toDetail", sender: nil)
+
+          }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 
       
@@ -154,6 +162,11 @@ class GalleryViewController: UIViewController, UIImagePickerControllerDelegate, 
            let nextVC = segue.destination as! AddTagViewController
         nextVC.image = image
           
+      }else if (segue.identifier == "toDetail") {
+        
+        let nextVC = segue.destination as! ImageViewController
+        nextVC.num = indexNum
+        
       }
 
 
