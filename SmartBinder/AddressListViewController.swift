@@ -9,16 +9,15 @@
 import UIKit
 import RealmSwift
 
-
 class AddressListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-
+    
     
     @IBOutlet var tableView: UITableView!
-    let relm = try! Realm()
+    let realm = try! Realm()
     //アドレスのすべてのデータを参照する　配列に似たような形
     let addresses = try! Realm().objects(Address.self)
     var notificationToken: NotificationToken?
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -28,8 +27,7 @@ class AddressListViewController: UIViewController, UITableViewDelegate, UITableV
         print(Realm.Configuration.defaultConfiguration.fileURL!)
         
         notificationToken = addresses.observe { [weak self] _ in
-        self?.tableView.reloadData()
-            
+            self?.tableView.reloadData()
         }
     }
     //テーブルビューに表示する
@@ -51,13 +49,13 @@ class AddressListViewController: UIViewController, UITableViewDelegate, UITableV
     {
         return true
     }
-
+    
     //スワイプしたセルを削除　※arrayNameは変数名に変更してください
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == UITableViewCell.EditingStyle.delete {
-          
-            try! relm.write {
-                relm.delete(addresses[indexPath.row])
+            
+            try! realm.write {
+                realm.delete(addresses[indexPath.row])
             }
             
             

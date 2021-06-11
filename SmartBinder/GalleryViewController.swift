@@ -3,7 +3,6 @@
 //  SmartBinder
 //
 //  Created by Zentaro Imai on 2021/05/28.
-//
 
 import UIKit
 import RealmSwift
@@ -11,18 +10,24 @@ import RealmSwift
 class GalleryViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UICollectionViewDelegate, UICollectionViewDataSource, UITextFieldDelegate {
     
     @IBOutlet var GalleryCollectionView: UICollectionView!
-    
+    //picture indexにする↓
+    var numb: Int!
+
     var num = Int()
     @IBOutlet var myLabel: UILabel!
     @IBOutlet var titleLabel: UILabel!
-    var pictures: Results<PictureData>!
+
+    
+    var pictures: List<PictureData>!
     //    let pictures = try! Realm().objects(PictureData.self)
     var notificationToken: NotificationToken?
     var indexNum = 0
+    
     var attributedText: NSAttributedString!
+
     
     let realm = try! Realm()
-//    let storyboard = UIStoryboard(name: "AddTag", bundle: nil)
+    //    let storyboard = UIStoryboard(name: "AddTag", bundle: nil)
     
     var image: UIImage!
     
@@ -35,16 +40,17 @@ class GalleryViewController: UIViewController, UIImagePickerControllerDelegate, 
         
         print(Realm.Configuration.defaultConfiguration.fileURL!)
         
-        //notificationToken = addresses.observe { [weak self] _ in
-        //   self?.collectionView.reloadData()
+        
+     //   notificationToken = addresses.observe { [weak self] _ in
+        //  self?.collectionView.reloadData()
         
         //collectionviewと同じようにデータを取る
         //代入する
-        myLabel.text = String(num)
+        myLabel.text = String(numb)
         
         
-        GalleryCollectionView.delegate = self
-        GalleryCollectionView.dataSource = self
+       GalleryCollectionView.delegate = self
+       GalleryCollectionView.dataSource = self
         
         
         
@@ -52,26 +58,25 @@ class GalleryViewController: UIViewController, UIImagePickerControllerDelegate, 
     }
     
     
+    
+    
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // picturesの配列の中身の数を表示する
-        return pictures.count
+        let addresses = self.realm.objects(Address.self)
+
+        return addresses[numb].pictures.count
     }
     
     
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        // Realmの初期化
-        let realm = try! Realm()
-        // Realmから保存されている写真のデータを取得
-        pictures = realm.objects(PictureData.self)
-        // CollectionViewを更新
+      
+      
         GalleryCollectionView.reloadData()
         
-        
-        
         print(Realm.Configuration.defaultConfiguration.fileURL!)
-        
         
     }
     
@@ -79,15 +84,28 @@ class GalleryViewController: UIViewController, UIImagePickerControllerDelegate, 
     
     // さっき作ったCollectionViewのセルにアイテムを表示
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        
+        //①アドレス一覧を取得　②何番目かを知る(num)　③
+        let addresses = self.realm.objects(Address.self)
+        // Realmから保存されている写真のデータを取得
+     //   pictures = addresses[numb].pictures
+    
         // Main.StoryboardのCellを探してくる
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! GalleryCellViewController
         // imageViewに写真を表示
-        cell.OneImageView.image = UIImage(data: pictures[indexPath.row].data as Data)
-
-         cell.titleLabel.text = pictures[indexPath.row].title
+        cell.OneImageView.image = UIImage(data: addresses[numb].pictures[indexPath.row].data as Data)
+        
+        cell.titleLabel.text = addresses[numb].pictures[indexPath.row].title
         // Cellに適用する
+        
+        
+        
+        
         return cell
+        
     }
+
     
     
     @IBAction func addImage() {
@@ -99,7 +117,6 @@ class GalleryViewController: UIViewController, UIImagePickerControllerDelegate, 
         picker.delegate = self
         // ピッカー（カメラ）を起動する
         present(picker, animated: true, completion: nil)
-        
     }
     
     @IBAction func addImagefromG() {
@@ -112,29 +129,25 @@ class GalleryViewController: UIViewController, UIImagePickerControllerDelegate, 
         // ピッカー（カメラ）を起動する
         present(picker, animated: true, completion: nil)
         
-     
     }
     
     
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-
-        // Realmの初期化
-        let realm = try! Realm()
         // 撮影した写真の取得
         image = info[.originalImage] as! UIImage
-   /*     // 写真を変換
-        let data = NSData(data: image.jpegData(compressionQuality: 0.9)!)
-        // Realmにデータを保存する
-        let pictureData = PictureData()
-        // 写真を設定
-        pictureData.data = data
-        // 写真の説明を設定
-      //  pictureData.title = "Test"
-        // Realmにデータを書き込む
-        try! realm.write {
-            realm.add(pictureData)
-        } */
+        /*     // 写真を変換
+         let data = NSData(data: image.jpegData(compressionQuality: 0.9)!)
+         // Realmにデータを保存する
+         let pictureData = PictureData()
+         // 写真を設定
+         pictureData.data = data
+         // 写真の説明を設定
+         //  pictureData.title = "Test"
+         // Realmにデータを書き込む
+         try! realm.write {
+         realm.add(pictureData)
+         } */
         // カメラを終了する操作
         self.dismiss(animated: true, completion: nil)
         
@@ -145,68 +158,68 @@ class GalleryViewController: UIViewController, UIImagePickerControllerDelegate, 
         
     }
     
-    
-    
-    
-    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-              print(indexPath.item)
-             indexNum = indexPath.item
-     self.performSegue(withIdentifier: "toDetail", sender: nil)
-
-          }
+        print(indexPath.item)
+        indexNum = indexPath.item
+        self.performSegue(withIdentifier: "toDetail", sender: nil)
+        
+    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-
-      
-      if (segue.identifier == "goToAdd") {
-          
-          // SecondViewControllerに移動する変数vcを定義する
-           let nextVC = segue.destination as! AddTagViewController
-        nextVC.image = image
-          
-      }else if (segue.identifier == "toDetail") {
         
-        let nextVC = segue.destination as! ImageViewController
-        nextVC.num = indexNum
         
-      }
-
+        if (segue.identifier == "goToAdd") {
+            
+            // SecondViewControllerに移動する変数vcを定義する
+            let nextVC = segue.destination as! AddTagViewController
+            
+            nextVC.image = image
+            nextVC.numb = self.numb
+            print(numb)
+            
+        } else if (segue.identifier == "toDetail") {
+            
+            let nextVC = segue.destination as! ImageViewController
+            nextVC.num = indexNum
+            
+        }
         
-    
+        
+        
+        
+        
+        
+        
+        
+        //  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        
+        //  if (segue.identifier == "goToAdd") {
+        
+        // SecondViewControllerに移動する変数vcを定義する
+        
+        //         let nextVC = segue.destination as! AddTagViewController
+        //    nextVC.num = indexNum
+        
+        
+        //  }
+        
+        
+        //   }
+        
+   
+        
+        /*
+         // MARK: - Navigation
+         
+         Swift Compiler Error Group    // In a storyboard-based application, you will often want to do a little preparation before navigation
+         override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+         // Get the new view controller using segue.destination.
+         // Pass the selected object to the new view controller.
+         }
+         */
+        
+        
+    }
 
-    
-    
-    
-    
-   //  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-
-       
-     //  if (segue.identifier == "goToAdd") {
-           
-           // SecondViewControllerに移動する変数vcを定義する
-      
-   //         let nextVC = segue.destination as! AddTagViewController
-    //    nextVC.num = indexNum
-          
-           
-     //  }
-
-
-          //   }
-    
-    
-    
-    /*
-     // MARK: - Navigation
-     
-     Swift Compiler Error Group    // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
-    
-    
-}
 }
