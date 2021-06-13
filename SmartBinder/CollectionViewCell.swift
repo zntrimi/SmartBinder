@@ -9,6 +9,6 @@ import UIKit
 
 class AddressListCollectionViewCell: UICollectionViewCell {
     @IBOutlet var nameLabel: UILabel!
-    
+    @IBOutlet var thumbnail: UIImageView!
 }
 

@@ -12,13 +12,12 @@ import RealmSwift
 
 class ImageViewController: UIViewController {
     
-    var num = Int()
+    var numb: Int!
     var image: UIImage!
-    var numb = Int()
-    
+    var num: Int!
+
     
     let realm = try! Realm()
-    var pictures: List<PictureData>!
     
     var notificationToken: NotificationToken?
 
@@ -40,13 +39,19 @@ class ImageViewController: UIViewController {
         
         let realm = try! Realm()
         
+        var pictures: List<PictureData>!
+
+        
         let addresses = realm.objects(Address.self)
 
-        pictures = addresses[num].pictures
+        pictures = addresses[numb].pictures
         
         
         
         imageView.image = UIImage(data: pictures[num].data as Data)
+        
+        print(num)
+        print(numb)
         
     }
     
@@ -61,27 +66,31 @@ class ImageViewController: UIViewController {
         }else{
             print("画像がありません")
         }
-        
-        
-        
+                
     }
     
     
     @IBAction func deleteimage (_ sender: Any) {
         //アラートを表示する↓＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
-        let alert: UIAlertController = UIAlertController(title: "注意", message: "削除してもいいですか？", preferredStyle: .actionSheet)
-        let canselAction: UIAlertAction = UIAlertAction(title: "キャンセル", style: .cancel) { (UIAlertAction) in
-            print("キャンセル")
+        let alert: UIAlertController = UIAlertController(title: "Caution", message: "Would you like to delete this image?", preferredStyle: .actionSheet)
+        let canselAction: UIAlertAction = UIAlertAction(title: "Cancel", style: .cancel) { (UIAlertAction) in
+            print("Cancel")
         }
         let okAction: UIAlertAction = UIAlertAction(title: "削除", style: .destructive) { (UIAlertAction) in
+            
             
             let addresses = self.realm.objects(Address.self)
             //pictureはPictureDataを元にして作ります
             let picture = PictureData()
             
             try! self.realm.write {
-             //   addresses[num].pictures[numb].remove()
+                
+                
+                
+         //   addresses.pictures[num].delete(picture)
+                
             }
+            
             
             //アラートが消えるのと画面遷移が重ならないように0.5秒後に画面遷移する
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {

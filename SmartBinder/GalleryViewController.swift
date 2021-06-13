@@ -12,12 +12,10 @@ class GalleryViewController: UIViewController, UIImagePickerControllerDelegate, 
     @IBOutlet var GalleryCollectionView: UICollectionView!
     //picture indexにする↓
     var numb: Int!
-
     var num = Int()
     @IBOutlet var myLabel: UILabel!
     @IBOutlet var titleLabel: UILabel!
 
-    
     var pictures: List<PictureData>!
     //    let pictures = try! Realm().objects(PictureData.self)
     var notificationToken: NotificationToken?
@@ -36,28 +34,30 @@ class GalleryViewController: UIViewController, UIImagePickerControllerDelegate, 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        
         print(Realm.Configuration.defaultConfiguration.fileURL!)
         
         
      //   notificationToken = addresses.observe { [weak self] _ in
         //  self?.collectionView.reloadData()
         
-        //collectionviewと同じようにデータを取る
-        //代入する
-        myLabel.text = String(numb)
-        
+
         
        GalleryCollectionView.delegate = self
        GalleryCollectionView.dataSource = self
         
-        
+        //　ナビゲーションバーの背景色
+        self.navigationController?.navigationBar.barTintColor = UIColor {_ in return #colorLiteral(red: 0.1764705926, green: 0.4980392158, blue: 0.7568627596, alpha: 1)}
+          // ナビゲーションバーのアイテムの色　（戻る　＜　とか　読み込みゲージとか）
+          self.navigationController?.navigationBar.tintColor = .white
+          // ナビゲーションバーのテキストを変更する
+          self.navigationController?.navigationBar.titleTextAttributes = [
+          // 文字の色
+            
+            .foregroundColor: UIColor.white
+          ]
         
         
     }
-    
-    
     
     
     
@@ -178,10 +178,11 @@ class GalleryViewController: UIViewController, UIImagePickerControllerDelegate, 
             print(numb)
             
         } else if (segue.identifier == "toDetail") {
-            
+                        
             let nextVC = segue.destination as! ImageViewController
-            nextVC.num = indexNum
-            
+                     nextVC.num = indexNum
+            nextVC.numb = self.numb
+
         }
         
         

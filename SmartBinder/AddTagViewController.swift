@@ -36,6 +36,31 @@ class AddTagViewController: UIViewController {
         print(numb)
         
         
+        
+        
+        
+        //　ナビゲーションバーの背景色
+        self.navigationController?.navigationBar.barTintColor = UIColor {_ in return #colorLiteral(red: 0.1764705926, green: 0.4980392158, blue: 0.7568627596, alpha: 1)}
+          // ナビゲーションバーのアイテムの色　（戻る　＜　とか　読み込みゲージとか）
+          self.navigationController?.navigationBar.tintColor = .white
+          // ナビゲーションバーのテキストを変更する
+          self.navigationController?.navigationBar.titleTextAttributes = [
+          // 文字の色
+            
+            .foregroundColor: UIColor.white
+          ]
+    
+   /* 前のviewcontrollerを透過する
+view.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0)
+
+// UIVisualEffectViewを生成する
+let visualEffectView = UIVisualEffectView(frame: view.frame)
+// エフェクトの種類を設定
+visualEffectView.effect = UIBlurEffect(style: .regular)
+// UIVisualEffectViewを他のビューの下に挿入するview.insertSubview(visualEffectView, at: 0)
+         */
+        
+        
     }
     
     //新しい行を追加する

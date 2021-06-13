@@ -3,9 +3,11 @@
 //  SmartBinder
 //
 //  Created by Zentaro Imai on 2021/05/24.
-//
+
+
 import UIKit
 import RealmSwift
+
 
 
 
@@ -19,8 +21,7 @@ class AddressCollectionViewController: UIViewController, UICollectionViewDelegat
     var indexNumb = 0
     var attributedText: NSAttributedString!
     @IBOutlet var label:UILabel!
-    
-    
+    var image: UIImage!
 
     
     
@@ -34,8 +35,6 @@ class AddressCollectionViewController: UIViewController, UICollectionViewDelegat
         
         notificationToken = addresses.observe { [weak self] _ in
             self?.collectionView.reloadData()
-            
-
             
         }
         
@@ -62,12 +61,20 @@ class AddressCollectionViewController: UIViewController, UICollectionViewDelegat
     //データを持ってくる
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        
-        
-        
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier:
+       // var pictures: List<PictureData>!
+
+    let cell = collectionView.dequeueReusableCell(withReuseIdentifier:
                                                         "Cell", for: indexPath) as! AddressListCollectionViewCell
-        cell.nameLabel.text = addresses[indexPath.row].name
+    cell.nameLabel.text = addresses[indexPath.row].name
+        
+    /*    var pictures: List<PictureData>!
+        
+        let addresses = realm.objects(Address.self)
+        
+        
+        pictures = addresses[indexPath.row].pictures
+        cell.thumbnail.image = UIImage(data: pictures[1].data as Data)
+        */
         return cell    }
     
     

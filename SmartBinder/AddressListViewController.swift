@@ -29,6 +29,21 @@ class AddressListViewController: UIViewController, UITableViewDelegate, UITableV
         notificationToken = addresses.observe { [weak self] _ in
             self?.tableView.reloadData()
         }
+        
+        
+        
+        //　ナビゲーションバーの背景色
+        self.navigationController?.navigationBar.barTintColor = UIColor {_ in return #colorLiteral(red: 0.1764705926, green: 0.4980392158, blue: 0.7568627596, alpha: 1)}
+          // ナビゲーションバーのアイテムの色　（戻る　＜　とか　読み込みゲージとか）
+          self.navigationController?.navigationBar.tintColor = .white
+          // ナビゲーションバーのテキストを変更する
+          self.navigationController?.navigationBar.titleTextAttributes = [
+          // 文字の色
+            
+            .foregroundColor: UIColor.white
+          ]
+        
+        
     }
     //テーブルビューに表示する
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -41,6 +56,7 @@ class AddressListViewController: UIViewController, UITableViewDelegate, UITableV
         return cell
     }
     
+        
     @IBAction func cancel() {
         self.dismiss(animated: true, completion: nil)
     }

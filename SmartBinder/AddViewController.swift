@@ -20,6 +20,20 @@ class AddViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        //　ナビゲーションバーの背景色
+        self.navigationController?.navigationBar.barTintColor = UIColor {_ in return #colorLiteral(red: 0.1764705926, green: 0.4980392158, blue: 0.7568627596, alpha: 1)}
+          // ナビゲーションバーのアイテムの色　（戻る　＜　とか　読み込みゲージとか）
+          self.navigationController?.navigationBar.tintColor = .white
+          // ナビゲーションバーのテキストを変更する
+          self.navigationController?.navigationBar.titleTextAttributes = [
+          // 文字の色
+            
+            .foregroundColor: UIColor.white
+          ]
+        
+        
     }
     //新しい行を追加する
     @IBAction func addAddress () {
