@@ -15,7 +15,6 @@ class GalleryViewController: UIViewController, UIImagePickerControllerDelegate, 
     var num = Int()
     @IBOutlet var myLabel: UILabel!
     @IBOutlet var titleLabel: UILabel!
-
     var pictures: List<PictureData>!
     //    let pictures = try! Realm().objects(PictureData.self)
     var notificationToken: NotificationToken?

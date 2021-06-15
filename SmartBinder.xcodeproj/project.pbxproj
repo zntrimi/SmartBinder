@@ -17,6 +17,7 @@
 		DF2DD142265BEC1B00E159F3 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2DD141265BEC1B00E159F3 /* AddViewController.swift */; };
 		DF2DD144265BF30D00E159F3 /* AddressCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2DD143265BF30D00E159F3 /* AddressCollectionViewController.swift */; };
 		DF2DD146265BF3BA00E159F3 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2DD145265BF3BA00E159F3 /* Address.swift */; };
+		DF44C6CA2675F05900729859 /* SwiftyJot in Frameworks */ = {isa = PBXBuildFile; productRef = DF44C6C92675F05900729859 /* SwiftyJot */; };
 		DF81C0FD2659F8EF00A9C814 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF81C0FC2659F8EF00A9C814 /* AppDelegate.swift */; };
 		DF81C0FF2659F8EF00A9C814 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF81C0FE2659F8EF00A9C814 /* SceneDelegate.swift */; };
 		DF81C1042659F8EF00A9C814 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF81C1022659F8EF00A9C814 /* Main.storyboard */; };
@@ -57,6 +58,7 @@
 			files = (
 				DF2DD140265BE68D00E159F3 /* RealmSwift in Frameworks */,
 				DF2DD13E265BE68D00E159F3 /* Realm in Frameworks */,
+				DF44C6CA2675F05900729859 /* SwiftyJot in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -123,6 +125,7 @@
 			packageProductDependencies = (
 				DF2DD13D265BE68D00E159F3 /* Realm */,
 				DF2DD13F265BE68D00E159F3 /* RealmSwift */,
+				DF44C6C92675F05900729859 /* SwiftyJot */,
 			);
 			productName = SmartBinder;
 			productReference = DF81C0F92659F8EF00A9C814 /* SmartBinder.app */;
@@ -153,6 +156,7 @@
 			mainGroup = DF81C0F02659F8EF00A9C814;
 			packageReferences = (
 				DF2DD13C265BE68D00E159F3 /* XCRemoteSwiftPackageReference "realm-cocoa" */,
+				DF44C6C82675F05900729859 /* XCRemoteSwiftPackageReference "SwiftyJot" */,
 			);
 			productRefGroup = DF81C0FA2659F8EF00A9C814 /* Products */;
 			projectDirPath = "";
@@ -343,7 +347,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_TEAM = 2K446D59RQ;
 				INFOPLIST_FILE = SmartBinder/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -365,7 +369,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_TEAM = 2K446D59RQ;
 				INFOPLIST_FILE = SmartBinder/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -412,6 +416,14 @@
 				minimumVersion = 10.7.6;
 			};
 		};
+		DF44C6C82675F05900729859 /* XCRemoteSwiftPackageReference "SwiftyJot" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/nickjbedford/SwiftyJot.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -424,6 +436,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = DF2DD13C265BE68D00E159F3 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
 			productName = RealmSwift;
+		};
+		DF44C6C92675F05900729859 /* SwiftyJot */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DF44C6C82675F05900729859 /* XCRemoteSwiftPackageReference "SwiftyJot" */;
+			productName = SwiftyJot;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

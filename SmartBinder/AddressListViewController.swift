@@ -29,9 +29,6 @@ class AddressListViewController: UIViewController, UITableViewDelegate, UITableV
         notificationToken = addresses.observe { [weak self] _ in
             self?.tableView.reloadData()
         }
-        
-        
-        
         //　ナビゲーションバーの背景色
         self.navigationController?.navigationBar.barTintColor = UIColor {_ in return #colorLiteral(red: 0.1764705926, green: 0.4980392158, blue: 0.7568627596, alpha: 1)}
           // ナビゲーションバーのアイテムの色　（戻る　＜　とか　読み込みゲージとか）

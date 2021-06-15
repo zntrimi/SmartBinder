@@ -8,6 +8,7 @@
 import UIKit
 import Accounts
 import RealmSwift
+import SwiftyJot
 
 
 class ImageViewController: UIViewController {
@@ -15,11 +16,14 @@ class ImageViewController: UIViewController {
     var numb: Int!
     var image: UIImage!
     var num: Int!
+    
+    var alertController: UIAlertController!
 
     
     let realm = try! Realm()
     
     var notificationToken: NotificationToken?
+ //   var image: UIImage!
 
 
     
@@ -54,6 +58,7 @@ class ImageViewController: UIViewController {
         print(numb)
         
     }
+    
     
     @IBAction func share ()  {
         
@@ -145,6 +150,72 @@ extension ImageViewController: UIScrollViewDelegate {
             scrollView.contentInset = .zero
         }
     }
+    
+    func alert(title:String, message:String) {
+        alertController = UIAlertController(title: title,
+                                   message: message,
+                                   preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "OK",
+                                       style: .default,
+                                       handler: nil))
+        present(alertController, animated: true)
+    }
+
+    
+    
+    @IBAction func addTag () {
+        
+        //はじめが大文字だとclass名が多い
+        //①アドレス一覧を取得　②何番目かを知る(num)　③
+        let addresses = self.realm.objects(Address.self)
+        //pictureはPictureDataを元にして作ります
+        let picture = PictureData()
+        //ココに問題あり
+        picture.data = NSData(data: (imageView.image?.jpegData(compressionQuality: 0.9)!)!)
+        
+        
+        picture.title = addresses[numb].pictures[num].title
+
+
+                
+        try! self.realm.write {
+           addresses[numb].pictures[num] = picture
+        }
+        
+
+        
+        alert(title: "Success!",
+                    message: "Image is saved")
+        
+        
+        // ②遷移先ViewControllerのインスタンス取得
+        
+        //   self.show(goToAdd, sender: self)
+    }
+    
+    
+    
+    
+    
+    
+    
+    @IBAction func buttonTapped() {
+
+        let swiftyJot = SwiftyJot()
+        var config = SwiftyJot.Config()
+        config.backgroundColor = .gray
+        config.title = "Example"
+        config.tintColor = .darkGray
+        config.buttonBackgroundColor = .white
+        config.brushColor = .red
+        config.brushSize = 8.0
+        config.showMenuButton = true
+        config.showPaletteButton = true
+        swiftyJot.config = config
+
+        swiftyJot.present(sourceImageView: imageView, presentingViewController: self)
+    }
+
     
     
     
