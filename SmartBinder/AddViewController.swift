@@ -30,11 +30,16 @@ class AddViewController: UIViewController {
           self.navigationController?.navigationBar.titleTextAttributes = [
           // 文字の色
             
-            .foregroundColor: UIColor.white
-          ]
+            .foregroundColor: UIColor.white]
         
-        
+        let tapGR: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+                tapGR.cancelsTouchesInView = false
+                self.view.addGestureRecognizer(tapGR)
     }
+    
+    @objc func dismissKeyboard() {
+          self.view.endEditing(true)
+      }
     //新しい行を追加する
     @IBAction func addAddress () {
         

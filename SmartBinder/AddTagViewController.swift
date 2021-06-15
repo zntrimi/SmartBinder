@@ -47,8 +47,15 @@ class AddTagViewController: UIViewController {
           self.navigationController?.navigationBar.titleTextAttributes = [
           // 文字の色
             
-            .foregroundColor: UIColor.white
-          ]
+            .foregroundColor: UIColor.white]
+            
+            
+            
+            
+          let tapGR: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+                  tapGR.cancelsTouchesInView = false
+                  self.view.addGestureRecognizer(tapGR)
+         
     
    /* 前のviewcontrollerを透過する
 view.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0)
@@ -62,6 +69,10 @@ visualEffectView.effect = UIBlurEffect(style: .regular)
         
         
     }
+    
+    @objc func dismissKeyboard() {
+         self.view.endEditing(true)
+     }
     
     //新しい行を追加する
     @IBAction func addTag () {
