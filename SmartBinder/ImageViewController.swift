@@ -84,14 +84,18 @@ class ImageViewController: UIViewController {
         let okAction: UIAlertAction = UIAlertAction(title: "削除", style: .destructive) { (UIAlertAction) in
             
             
-            let addresses = self.realm.objects(Address.self)
-            //pictureはPictureDataを元にして作ります
-            let picture = PictureData()
+   
             
             try! self.realm.write {
                 
                 
                 
+                let addresses = self.realm.objects(Address.self)
+                //pictureはPictureDataを元にして作ります
+                let picture = PictureData()
+                
+                self.realm.delete(addresses[self.numb].pictures[self.num])
+
          //   addresses.pictures[num].delete(picture)
                 
             }
@@ -192,6 +196,11 @@ extension ImageViewController: UIScrollViewDelegate {
         
         //   self.show(goToAdd, sender: self)
     }
+    
+    
+    
+    
+    
     
     
     
