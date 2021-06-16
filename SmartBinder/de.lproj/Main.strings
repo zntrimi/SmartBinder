@@ -1,0 +1,69 @@
+
+/* Class = "UILabel"; text = "重要"; ObjectID = "1ez-5s-K9j"; */
+"1ez-5s-K9j.text" = "重要";
+
+/* Class = "UIBarButtonItem"; title = "Annotate"; ObjectID = "6Oy-0x-suX"; */
+"6Oy-0x-suX.title" = "Kommentieren";
+
+/* Class = "UINavigationItem"; title = "Collection"; ObjectID = "7rP-LE-dhK"; */
+"7rP-LE-dhK.title" = "Sammlung";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "E9U-r2-5RL"; */
+"E9U-r2-5RL.text" = "Titel";
+
+/* Class = "UIBarButtonItem"; title = "Add"; ObjectID = "GD2-uD-JRW"; */
+"GD2-uD-JRW.title" = "Hinzufügen";
+
+/* Class = "UIBarButtonItem"; title = "Edit"; ObjectID = "GQK-5p-7FU"; */
+"GQK-5p-7FU.title" = "Bearbeiten";
+
+/* Class = "UIBarButtonItem"; title = "Cancel"; ObjectID = "KXe-x9-B60"; */
+"KXe-x9-B60.title" = "Stornieren";
+
+/* Class = "UILabel"; text = "Tag"; ObjectID = "L5i-XD-0w1"; */
+"L5i-XD-0w1.text" = "Etikett";
+
+/* Class = "UILabel"; text = "Name"; ObjectID = "PVv-Er-BDc"; */
+"PVv-Er-BDc.text" = "Name";
+
+/* Class = "UILabel"; text = "Image"; ObjectID = "QiA-he-Qbc"; */
+"QiA-he-Qbc.text" = "Bild";
+
+/* Class = "UIBarButtonItem"; title = "Save Changes"; ObjectID = "Srz-51-FKS"; */
+"Srz-51-FKS.title" = "SÄnderungen speichern";
+
+/* Class = "UIBarButtonItem"; title = "Item"; ObjectID = "Syf-BD-3rF"; */
+"Syf-BD-3rF.title" = "Artikel";
+
+/* Class = "UIBarButtonItem"; title = "Item"; ObjectID = "Wr1-na-NHl"; */
+"Wr1-na-NHl.title" = "Artikel";
+
+/* Class = "UIBarButtonItem"; title = "Item"; ObjectID = "Wtv-oe-n78"; */
+"Wtv-oe-n78.title" = "Artikel";
+
+/* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "Y4C-AI-fIA"; */
+"Y4C-AI-fIA.normalTitle" = "Stornieren";
+
+/* Class = "UIBarButtonItem"; title = "Add"; ObjectID = "YTE-ir-CMr"; */
+"YTE-ir-CMr.title" = "Hinzufügen";
+
+/* Class = "UIButton"; normalTitle = "Reset all"; ObjectID = "bOK-wp-2dh"; */
+"bOK-wp-2dh.normalTitle" = "Alles zurücksetzen";
+
+/* Class = "UINavigationItem"; title = "Swipe to Delete"; ObjectID = "fX7-oJ-CvI"; */
+"fX7-oJ-CvI.title" = "Zum Löschen wischen";
+
+/* Class = "UIBarButtonItem"; title = "Save"; ObjectID = "fXG-7v-Iax"; */
+"fXG-7v-Iax.title" = "Speichern";
+
+/* Class = "UIButton"; normalTitle = "Save Tag"; ObjectID = "l6G-Bc-haD"; */
+"l6G-Bc-haD.normalTitle" = "Speichern Etikett";
+
+/* Class = "UILabel"; text = "0"; ObjectID = "oPc-Ak-aN2"; */
+"oPc-Ak-aN2.text" = "0";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "qNK-kj-fgi"; */
+"qNK-kj-fgi.text" = "Titel";
+
+/* Class = "UIBarButtonItem"; title = "Save"; ObjectID = "yBz-Y9-2TF"; */
+"yBz-Y9-2TF.title" = "Speichern";

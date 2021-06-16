@@ -23,11 +23,11 @@
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSCameraUsageDescription</key>
-	<string>アプリ内に保存し管理する写真をカメラから呼び出します。</string>
+	<string>Access camera to save and organize in the app.</string>
 	<key>NSPhotoLibraryAddUsageDescription</key>
-	<string>編集した画像をフォトライブラリに保存します</string>
+	<string>Save edited photo to the library.</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>アプリ内で管理する画像をフォトライブラリから呼び出します</string>
+	<string>Access photo library to save and organize in the app.</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>

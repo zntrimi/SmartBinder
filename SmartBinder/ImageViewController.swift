@@ -76,15 +76,17 @@ class ImageViewController: UIViewController {
     
     
     @IBAction func deleteimage (_ sender: Any) {
+        
+        let alertTitle1:String = NSLocalizedString("Caution", comment: "")
+            let alertMessage1:String = NSLocalizedString("delete", comment: "")
+        let alertMessage2:String = NSLocalizedString("Cancel", comment: "")
+        let alertMessage3:String = NSLocalizedString("delete1", comment: "")
         //アラートを表示する↓＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
-        let alert: UIAlertController = UIAlertController(title: "Caution", message: "Would you like to delete this image?", preferredStyle: .actionSheet)
-        let canselAction: UIAlertAction = UIAlertAction(title: "Cancel", style: .cancel) { (UIAlertAction) in
+        let alert: UIAlertController = UIAlertController(title: alertTitle1, message: alertMessage1, preferredStyle: .actionSheet)
+        let canselAction: UIAlertAction = UIAlertAction(title: alertMessage2, style: .cancel) { (UIAlertAction) in
             print("Cancel")
         }
-        let okAction: UIAlertAction = UIAlertAction(title: "削除", style: .destructive) { (UIAlertAction) in
-            
-            
-   
+        let okAction: UIAlertAction = UIAlertAction(title: alertMessage3, style: .destructive) { (UIAlertAction) in
             
             try! self.realm.write {
                 
@@ -186,10 +188,11 @@ extension ImageViewController: UIScrollViewDelegate {
            addresses[numb].pictures[num] = picture
         }
         
-
+        let alertMessage4:String = NSLocalizedString("Success", comment: "")
+        let alertMessage5:String = NSLocalizedString("Image", comment: "")
         
-        alert(title: "Success!",
-                    message: "Image is saved")
+        alert(title: alertMessage4,
+                    message: alertMessage5)
         
         
         // ②遷移先ViewControllerのインスタンス取得

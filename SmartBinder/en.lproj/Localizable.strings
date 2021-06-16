@@ -1,0 +1,15 @@
+
+/*
+  Localizable.strings
+  SmartBinder
+
+  Created by Zentaro Imai on 2021/06/16.
+  
+*/
+"Success" = "Success!";
+"Image" = "Image is saved";
+"Caution" = "Caution";
+"delete" = "Would you like to delete this image?";
+"delete1" = "Delete";
+"Cancel" = "Cancel";
+
