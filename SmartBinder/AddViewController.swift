@@ -32,14 +32,11 @@ class AddViewController: UIViewController {
             
             .foregroundColor: UIColor.white]
         
-        let tapGR: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
-                tapGR.cancelsTouchesInView = false
-                self.view.addGestureRecognizer(tapGR)
+        
     }
     
-    @objc func dismissKeyboard() {
-          self.view.endEditing(true)
-      }
+    
+    
     //新しい行を追加する
     @IBAction func addAddress () {
         
@@ -79,3 +76,13 @@ class AddViewController: UIViewController {
     
     
 }
+
+/*
+extension AddViewController: UITextFieldDelegate{
+//Close text field with return key
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+}
+*/
