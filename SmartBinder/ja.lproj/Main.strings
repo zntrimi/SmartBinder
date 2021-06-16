@@ -1,0 +1,69 @@
+
+/* Class = "UILabel"; text = "重要"; ObjectID = "1ez-5s-K9j"; */
+"1ez-5s-K9j.text" = "重要";
+
+/* Class = "UIBarButtonItem"; title = "Annotate"; ObjectID = "6Oy-0x-suX"; */
+"6Oy-0x-suX.title" = "注釈";
+
+/* Class = "UINavigationItem"; title = "Collection"; ObjectID = "7rP-LE-dhK"; */
+"7rP-LE-dhK.title" = "コレクション";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "E9U-r2-5RL"; */
+"E9U-r2-5RL.text" = "タイトル";
+
+/* Class = "UIBarButtonItem"; title = "Add"; ObjectID = "GD2-uD-JRW"; */
+"GD2-uD-JRW.title" = "追加";
+
+/* Class = "UIBarButtonItem"; title = "Edit"; ObjectID = "GQK-5p-7FU"; */
+"GQK-5p-7FU.title" = "編集";
+
+/* Class = "UIBarButtonItem"; title = "Cancel"; ObjectID = "KXe-x9-B60"; */
+"KXe-x9-B60.title" = "キャンセル";
+
+/* Class = "UILabel"; text = "Tag"; ObjectID = "L5i-XD-0w1"; */
+"L5i-XD-0w1.text" = "タグ";
+
+/* Class = "UILabel"; text = "Name"; ObjectID = "PVv-Er-BDc"; */
+"PVv-Er-BDc.text" = "名前";
+
+/* Class = "UILabel"; text = "Image"; ObjectID = "QiA-he-Qbc"; */
+"QiA-he-Qbc.text" = "画像";
+
+/* Class = "UIBarButtonItem"; title = "Save Changes"; ObjectID = "Srz-51-FKS"; */
+"Srz-51-FKS.title" = "変更を保存";
+
+/* Class = "UIBarButtonItem"; title = "Item"; ObjectID = "Syf-BD-3rF"; */
+"Syf-BD-3rF.title" = "アイテム";
+
+/* Class = "UIBarButtonItem"; title = "Item"; ObjectID = "Wr1-na-NHl"; */
+"Wr1-na-NHl.title" = "アイテム";
+
+/* Class = "UIBarButtonItem"; title = "Item"; ObjectID = "Wtv-oe-n78"; */
+"Wtv-oe-n78.title" = "アイテム";
+
+/* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "Y4C-AI-fIA"; */
+"Y4C-AI-fIA.normalTitle" = "キャンセル";
+
+/* Class = "UIBarButtonItem"; title = "Add"; ObjectID = "YTE-ir-CMr"; */
+"YTE-ir-CMr.title" = "追加";
+
+/* Class = "UIButton"; normalTitle = "Reset all"; ObjectID = "bOK-wp-2dh"; */
+"bOK-wp-2dh.normalTitle" = "すべてリセット";
+
+/* Class = "UINavigationItem"; title = "Swipe to Delete"; ObjectID = "fX7-oJ-CvI"; */
+"fX7-oJ-CvI.title" = "スワイプで削除";
+
+/* Class = "UIBarButtonItem"; title = "Save"; ObjectID = "fXG-7v-Iax"; */
+"fXG-7v-Iax.title" = "保存";
+
+/* Class = "UIButton"; normalTitle = "Save Tag"; ObjectID = "l6G-Bc-haD"; */
+"l6G-Bc-haD.normalTitle" = "タグを保存";
+
+/* Class = "UILabel"; text = "0"; ObjectID = "oPc-Ak-aN2"; */
+"oPc-Ak-aN2.text" = "0";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "qNK-kj-fgi"; */
+"qNK-kj-fgi.text" = "タイトル";
+
+/* Class = "UIBarButtonItem"; title = "Save"; ObjectID = "yBz-Y9-2TF"; */
+"yBz-Y9-2TF.title" = "保存";

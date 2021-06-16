@@ -51,6 +51,9 @@
 		DF9581FE267A3D6F005DE6FD /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		DF958202267A3FBE005DE6FD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		DF958204267A4C35005DE6FD /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		DF958205267A5795005DE6FD /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
+		DF958206267A5795005DE6FD /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		DF958207267A5795005DE6FD /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 		DFC236A9265FF4AF00AFAAEE /* GalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
 		DFD0808F2669FE7F00DD71AE /* AddTagViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTagViewController.swift; sourceTree = "<group>"; };
 		DFD08091266A088F00DD71AE /* Screen Shot 2021-04-08 at 10.03.23.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screen Shot 2021-04-08 at 10.03.23.png"; sourceTree = "<group>"; };
@@ -159,6 +162,7 @@
 				en,
 				Base,
 				de,
+				ja,
 			);
 			mainGroup = DF81C0F02659F8EF00A9C814;
 			packageReferences = (
@@ -218,6 +222,7 @@
 			children = (
 				DF81C1032659F8EF00A9C814 /* Base */,
 				DF9581FD267A3D6F005DE6FD /* de */,
+				DF958205267A5795005DE6FD /* ja */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -227,6 +232,7 @@
 			children = (
 				DF81C1082659F8F200A9C814 /* Base */,
 				DF9581FE267A3D6F005DE6FD /* de */,
+				DF958206267A5795005DE6FD /* ja */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -236,6 +242,7 @@
 			children = (
 				DF958202267A3FBE005DE6FD /* en */,
 				DF958204267A4C35005DE6FD /* de */,
+				DF958207267A5795005DE6FD /* ja */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
