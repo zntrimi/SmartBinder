@@ -7,17 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		40C9F2197C52D6BDFC811F92 /* Pods_SmartBinder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 356BE20FF7B01BB89B8F9D06 /* Pods_SmartBinder.framework */; };
 		DF079172266231F900425768 /* GalleryCellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF079171266231F900425768 /* GalleryCellViewController.swift */; };
 		DF079174266236A800425768 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF079173266236A800425768 /* Note.swift */; };
 		DF0791762662389A00425768 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0791752662389A00425768 /* ImageViewController.swift */; };
 		DF194E14265D42BA0057279A /* AddressListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF194E13265D42BA0057279A /* AddressListViewController.swift */; };
 		DF194E18265D43A80057279A /* AddressListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF194E17265D43A80057279A /* AddressListTableViewCell.swift */; };
-		DF2DD13E265BE68D00E159F3 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = DF2DD13D265BE68D00E159F3 /* Realm */; };
-		DF2DD140265BE68D00E159F3 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = DF2DD13F265BE68D00E159F3 /* RealmSwift */; };
+		DF2DD13E265BE68D00E159F3 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = DF2DD13D265BE68D00E159F3 /* SwiftPackageProductDependency */; };
+		DF2DD140265BE68D00E159F3 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = DF2DD13F265BE68D00E159F3 /* SwiftPackageProductDependency */; };
 		DF2DD142265BEC1B00E159F3 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2DD141265BEC1B00E159F3 /* AddViewController.swift */; };
 		DF2DD144265BF30D00E159F3 /* AddressCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2DD143265BF30D00E159F3 /* AddressCollectionViewController.swift */; };
 		DF2DD146265BF3BA00E159F3 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2DD145265BF3BA00E159F3 /* Address.swift */; };
-		DF44C6CA2675F05900729859 /* SwiftyJot in Frameworks */ = {isa = PBXBuildFile; productRef = DF44C6C92675F05900729859 /* SwiftyJot */; };
 		DF81C0FD2659F8EF00A9C814 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF81C0FC2659F8EF00A9C814 /* AppDelegate.swift */; };
 		DF81C0FF2659F8EF00A9C814 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF81C0FE2659F8EF00A9C814 /* SceneDelegate.swift */; };
 		DF81C1042659F8EF00A9C814 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF81C1022659F8EF00A9C814 /* Main.storyboard */; };
@@ -31,6 +31,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		356BE20FF7B01BB89B8F9D06 /* Pods_SmartBinder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmartBinder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1E492524F0C6DAA98625B59 /* Pods-SmartBinder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartBinder.debug.xcconfig"; path = "Target Support Files/Pods-SmartBinder/Pods-SmartBinder.debug.xcconfig"; sourceTree = "<group>"; };
+		DB1398F601B0ECF9089B727B /* Pods-SmartBinder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartBinder.release.xcconfig"; path = "Target Support Files/Pods-SmartBinder/Pods-SmartBinder.release.xcconfig"; sourceTree = "<group>"; };
 		DF079171266231F900425768 /* GalleryCellViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryCellViewController.swift; sourceTree = "<group>"; };
 		DF079173266236A800425768 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		DF0791752662389A00425768 /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
@@ -64,20 +67,40 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DF2DD140265BE68D00E159F3 /* RealmSwift in Frameworks */,
-				DF2DD13E265BE68D00E159F3 /* Realm in Frameworks */,
-				DF44C6CA2675F05900729859 /* SwiftyJot in Frameworks */,
+				DF2DD140265BE68D00E159F3 /* BuildFile in Frameworks */,
+				DF2DD13E265BE68D00E159F3 /* BuildFile in Frameworks */,
+				40C9F2197C52D6BDFC811F92 /* Pods_SmartBinder.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		71EF6500733B89C21E160D9F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				356BE20FF7B01BB89B8F9D06 /* Pods_SmartBinder.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BEDD3AE0421CE25F176593B0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A1E492524F0C6DAA98625B59 /* Pods-SmartBinder.debug.xcconfig */,
+				DB1398F601B0ECF9089B727B /* Pods-SmartBinder.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		DF81C0F02659F8EF00A9C814 = {
 			isa = PBXGroup;
 			children = (
 				DF81C0FB2659F8EF00A9C814 /* SmartBinder */,
 				DF81C0FA2659F8EF00A9C814 /* Products */,
+				BEDD3AE0421CE25F176593B0 /* Pods */,
+				71EF6500733B89C21E160D9F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -122,9 +145,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DF81C10D2659F8F200A9C814 /* Build configuration list for PBXNativeTarget "SmartBinder" */;
 			buildPhases = (
+				7683BF79E2DABBE9FD48C3FD /* [CP] Check Pods Manifest.lock */,
 				DF81C0F52659F8EF00A9C814 /* Sources */,
 				DF81C0F62659F8EF00A9C814 /* Frameworks */,
 				DF81C0F72659F8EF00A9C814 /* Resources */,
+				F523257D6F6F31E5ACEC1BA1 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,9 +157,8 @@
 			);
 			name = SmartBinder;
 			packageProductDependencies = (
-				DF2DD13D265BE68D00E159F3 /* Realm */,
-				DF2DD13F265BE68D00E159F3 /* RealmSwift */,
-				DF44C6C92675F05900729859 /* SwiftyJot */,
+				DF2DD13D265BE68D00E159F3 /* SwiftPackageProductDependency */,
+				DF2DD13F265BE68D00E159F3 /* SwiftPackageProductDependency */,
 			);
 			productName = SmartBinder;
 			productReference = DF81C0F92659F8EF00A9C814 /* SmartBinder.app */;
@@ -166,8 +190,7 @@
 			);
 			mainGroup = DF81C0F02659F8EF00A9C814;
 			packageReferences = (
-				DF2DD13C265BE68D00E159F3 /* XCRemoteSwiftPackageReference "realm-cocoa" */,
-				DF44C6C82675F05900729859 /* XCRemoteSwiftPackageReference "SwiftyJot" */,
+				DF2DD13C265BE68D00E159F3 /* RemoteSwiftPackageReference */,
 			);
 			productRefGroup = DF81C0FA2659F8EF00A9C814 /* Products */;
 			projectDirPath = "";
@@ -192,6 +215,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7683BF79E2DABBE9FD48C3FD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SmartBinder-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F523257D6F6F31E5ACEC1BA1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SmartBinder/Pods-SmartBinder-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SmartBinder/Pods-SmartBinder-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SmartBinder/Pods-SmartBinder-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		DF81C0F52659F8EF00A9C814 /* Sources */ = {
@@ -370,18 +435,20 @@
 		};
 		DF81C10E2659F8F200A9C814 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A1E492524F0C6DAA98625B59 /* Pods-SmartBinder.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 10;
+				CURRENT_PROJECT_VERSION = 11;
 				DEVELOPMENT_TEAM = 2K446D59RQ;
 				INFOPLIST_FILE = SmartBinder/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = jp.com.lifeistech.smartbinder;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "L13-Imai-Develop";
@@ -392,18 +459,20 @@
 		};
 		DF81C10F2659F8F200A9C814 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DB1398F601B0ECF9089B727B /* Pods-SmartBinder.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 10;
+				CURRENT_PROJECT_VERSION = 11;
 				DEVELOPMENT_TEAM = 2K446D59RQ;
 				INFOPLIST_FILE = SmartBinder/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = jp.com.lifeistech.smartbinder;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "L13-Imai-Distribution";
@@ -436,7 +505,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		DF2DD13C265BE68D00E159F3 /* XCRemoteSwiftPackageReference "realm-cocoa" */ = {
+		DF2DD13C265BE68D00E159F3 /* RemoteSwiftPackageReference */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/realm/realm-cocoa.git";
 			requirement = {
@@ -444,31 +513,18 @@
 				minimumVersion = 10.7.6;
 			};
 		};
-		DF44C6C82675F05900729859 /* XCRemoteSwiftPackageReference "SwiftyJot" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/nickjbedford/SwiftyJot.git";
-			requirement = {
-				branch = master;
-				kind = branch;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		DF2DD13D265BE68D00E159F3 /* Realm */ = {
+		DF2DD13D265BE68D00E159F3 /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = DF2DD13C265BE68D00E159F3 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			package = DF2DD13C265BE68D00E159F3 /* RemoteSwiftPackageReference */;
 			productName = Realm;
 		};
-		DF2DD13F265BE68D00E159F3 /* RealmSwift */ = {
+		DF2DD13F265BE68D00E159F3 /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = DF2DD13C265BE68D00E159F3 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			package = DF2DD13C265BE68D00E159F3 /* RemoteSwiftPackageReference */;
 			productName = RealmSwift;
-		};
-		DF44C6C92675F05900729859 /* SwiftyJot */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = DF44C6C82675F05900729859 /* XCRemoteSwiftPackageReference "SwiftyJot" */;
-			productName = SwiftyJot;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
